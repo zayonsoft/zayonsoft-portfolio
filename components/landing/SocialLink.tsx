@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export type LinkProps = {
+type LinkProps = {
   name: string;
   icon: React.ReactNode;
   url: string;

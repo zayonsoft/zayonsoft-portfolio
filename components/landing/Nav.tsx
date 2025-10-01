@@ -7,6 +7,9 @@ import FancyMenu from "./FancyMenu";
 import { FaSearch } from "react-icons/fa";
 import { HiX } from "react-icons/hi";
 import Link from "next/link";
+import { BiCode, BiCodeAlt, BiHome, BiUser } from "react-icons/bi";
+import NavLink from "./NavLink";
+import { FiCode, FiHome, FiMonitor, FiUser } from "react-icons/fi";
 
 const ibmPlexMono = IBM_Plex_Mono({
   weight: ["100", "200", "300", "400", "500", "600", "700"],
@@ -74,29 +77,71 @@ export default function Nav() {
 
           {/* Mobile View Side bar overlay */}
           <div
-            className={`hidden max-[701px]:grid fixed left-0 right-0 top-0 h-screen bg-[#979a9f34]`}
+            className={`hidden max-[701px]:grid fixed left-0 right-0 top-0 h-screen bg-[#c1c1c141]`}
           >
             {/* The inner div that slides in */}
-            <div className="absolute grid gap-3 content-start right-0 w-11/12 px-3 top-0 bottom-0 bg-[#292F36]">
-              <section className="px-4">
-                <div className="py-3 max-[701px]:border-b-2 max-[701px]:border-b-[#43454D]">
+            <div className="absolute grid gap-3 content-start right-0 w-11/12 max-w-80 px-4 top-0 bottom-0 bg-[#292F36]">
+              <section className="">
+                <div className="grid items-center py-6">
                   <button
-                    className="cursor-pointer text-[#12F7D6] text-3xl"
+                    className="cursor-pointer text-white text-2xl"
                     type="button"
                   >
                     <HiX />
                   </button>
                 </div>
               </section>
-              <ul>
+              <ul className="grid gap-3">
                 <li>
-                  <Link href={"#"}>
-                    <span></span>
-                    <span>Testing</span>
-                  </Link>
+                  <NavLink
+                    icon={<FiHome />}
+                    url="#"
+                    name="Home"
+                    active={true}
+                  />
+                </li>
+                <li>
+                  <NavLink
+                    icon={<FiUser />}
+                    url="#"
+                    name="About"
+                    active={false}
+                  />
+                </li>
+                <li>
+                  <NavLink
+                    icon={<FiCode />}
+                    url="#"
+                    name="Skills"
+                    active={false}
+                  />
+                </li>
+                <li>
+                  <NavLink
+                    icon={<FiMonitor />}
+                    url="#"
+                    name="My Work"
+                    active={false}
+                  />
                 </li>
               </ul>
+              <section className="absolute grid left-0 right-0 bottom-0 px-4 text-[#12F7D6]">
+                <div className="grid border-t border-t-[#494b53] justify-center py-5">
+                  <div className="flex gap-5 items-center">
+                    <Link href={"#"}>
+                      <BsTwitterX />
+                    </Link>
+                    <Link href={"#"}>
+                      <FaFacebookF />
+                    </Link>
+                    <Link href={"#"}>
+                      <BsGithub />
+                    </Link>
+                  </div>
+                </div>
+              </section>
             </div>
+            {/* Inner Side bar ends above */}
           </div>
         </div>
       </nav>

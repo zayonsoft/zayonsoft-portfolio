@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.custom-transition {
+  transition: 0.8s ease;
+}
