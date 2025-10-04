@@ -3,3 +3,11 @@
 .custom-transition {
   transition: 0.8s ease;
 }
+
+.profile-pic {
+  background: linear-gradient(#12f7d6, #ffffff);
+}
+
+.pic-gradient {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 80.04%);
+}

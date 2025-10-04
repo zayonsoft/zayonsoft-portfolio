@@ -41,7 +41,7 @@ export default function Nav() {
         <div>
           <Link href={"/"}>
             <Image
-              className="h-auto w-33 min-w-25 max-[901px]:w-28"
+              className="h-auto outline-none w-33 min-w-25 max-[901px]:w-28"
               src={"/page_logo.svg"}
               width={120}
               height={50}
@@ -106,7 +106,7 @@ export default function Nav() {
           {/* Mobile View Side bar overlay */}
           <div
             onClick={(e) => closeAsideWhenClicked(e)}
-            className={`hidden max-[701px]:grid custom-transition fixed left-0 right-0 top-0 h-screen bg-[#c1c1c12c] ${
+            className={`hidden max-[701px]:grid custom-transition z-50 fixed left-0 right-0 top-0 h-screen bg-[#64646478] ${
               !sideOpened ? "translate-x-full" : ""
             }`}
           >
