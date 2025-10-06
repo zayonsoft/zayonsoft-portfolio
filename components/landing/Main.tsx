@@ -18,7 +18,7 @@ const ubuntu = Ubuntu({
 
 export default function Main() {
   return (
-    <section className="pt-27 pb-5 px-20 max-[901px]:px-10 max-[701px]:px-5">
+    <section className="pt-27 pb-5 px-20 grid gap-10 max-[901px]:px-10 max-[701px]:px-5">
       <div className="grid gap-1 grid-cols-[0.65fr_1fr] max-[701px]:grid-cols-1 max-[701px]:gap-8">
         <div className="pr-10 max-[701px]:pr-0">
           <div className="grid rounded-full p-[5px] profile-pic justify-self-end max-[701px]:justify-self-center">
@@ -151,6 +151,35 @@ export default function Main() {
             </div>
           </section>
         </div>
+      </div>
+      {/* Div BElow Shows the count and experience */}
+      <div>
+        <section
+          className={`${ibmPlexMono.className} bg-black w-full p-12 max-w-[920px] m-auto rounded-full`}
+        >
+          <div className="flex items-center gap-2">
+            <h2 className="text-[#12F7D6] text-5xl">4</h2>
+            <p className="text-white grid text-xs">
+              <span>Programing</span>
+              <span>Language</span>
+            </p>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <h2 className="text-[#12F7D6] text-5xl">6</h2>
+            <p className="text-white grid text-xs">
+              <span>Development</span>
+              <span>Tools</span>
+            </p>
+          </div>
+          <div className="flex items-center gap-2">
+            <h2 className="text-[#12F7D6] text-5xl">8</h2>
+            <p className="text-white grid text-xs">
+              <span>Years of</span>
+              <span>Experience</span>
+            </p>
+          </div>
+        </section>
       </div>
     </section>
   );
