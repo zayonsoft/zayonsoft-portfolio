@@ -11,3 +11,9 @@
 .pic-gradient {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 80.04%);
 }
+
+.about-bg {
+  background-image: url(../public/about_pattern.png);
+  background-size: cover;
+  background-position: center;
+}

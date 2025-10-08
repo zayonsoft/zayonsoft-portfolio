@@ -1,30 +1,30 @@
 import { IBM_Plex_Mono, Ubuntu } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-import { BiDownload, BiLink } from "react-icons/bi";
+import { BiLink } from "react-icons/bi";
 import { CgBriefcase, CgMail } from "react-icons/cg";
 import { RxDownload } from "react-icons/rx";
 import { SlLocationPin } from "react-icons/sl";
 
-const ibmPlexMono = IBM_Plex_Mono({
+export const ibmPlexMono = IBM_Plex_Mono({
   weight: ["100", "200", "300", "400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
-const ubuntu = Ubuntu({
+export const ubuntu = Ubuntu({
   weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
 });
 
 export default function Main() {
   return (
-    <section className="pt-27 pb-5 px-20 grid gap-10 max-[901px]:px-10 max-[701px]:px-5">
+    <section className="pt-27 pb-10 px-20 grid gap-16 max-[901px]:px-10 max-[701px]:px-5">
       <div className="grid gap-1 grid-cols-[0.65fr_1fr] max-[701px]:grid-cols-1 max-[701px]:gap-8">
         <div className="pr-10 max-[701px]:pr-0">
-          <div className="grid rounded-full p-[5px] profile-pic justify-self-end max-[701px]:justify-self-center">
-            <div className=" relative z-10">
+          <div className="grid rounded-full p-[5px] profile-pic max-w-[290px] justify-self-end max-[701px]:justify-self-center">
+            <div className="relative z-10">
               <Image
-                className="w-auto min-w-60 h-[85vh] rounded-full max-[701px]:min-w-auto"
+                className="w-auto min-w-20 h-[90vh] rounded-full object-center max-[701px]:min-w-auto"
                 src={"/zayonsoft_pic.png"}
                 height={1500}
                 width={1000}
@@ -153,9 +153,11 @@ export default function Main() {
         </div>
       </div>
       {/* Div BElow Shows the count and experience */}
-      <div>
+      <div
+        className={`bg-black w-full p-8 max-w-[920px] m-auto rounded-full grid justify-center max-[550px]:w-auto max-[550px]:py-15  max-[550px]:px-9`}
+      >
         <section
-          className={`${ibmPlexMono.className} bg-black w-full p-12 max-w-[920px] m-auto rounded-full`}
+          className={`${ibmPlexMono.className} flex gap-10 max-[550px]:flex-col`}
         >
           <div className="flex items-center gap-2">
             <h2 className="text-[#12F7D6] text-5xl">4</h2>

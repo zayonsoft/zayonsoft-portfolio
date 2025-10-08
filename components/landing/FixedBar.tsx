@@ -1,11 +1,10 @@
 import Link from "next/link";
-import { BiHomeAlt2 } from "react-icons/bi";
-import { CgHomeAlt, CgMail } from "react-icons/cg";
+import { CgMail } from "react-icons/cg";
 import { FiCode, FiHome, FiMonitor, FiUser } from "react-icons/fi";
 
 export default function FixedBar() {
   return (
-    <section className="left-3 fixed -translate-y-1/2 top-1/2">
+    <section className="left-3 fixed z-50 -translate-y-1/2 top-1/2">
       <div className="rounded-full p-[1px] profile-pic">
         <section className="grid gap-5 justify-self-center bg-black justify-items-center rounded-full p-2">
           <div>
