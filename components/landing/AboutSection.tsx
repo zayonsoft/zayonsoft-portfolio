@@ -3,10 +3,10 @@ import { ubuntu, ibmPlexMono } from "./Main";
 
 export default function AboutSection() {
   return (
-    <section className="bg-[#1A1E23] relative px-20 max-[901px]:px-10 max-[701px]:px-5 py-20">
+    <section className="bg-[#1A1E23] relative px-20 max-[901px]:px-10 max-[701px]:px-5 py-20 max-[701px]:py-10">
       <div className="absolute about-bg top-0 bottom-0 left-0 right-0 opacity-10"></div>
       <div className="grid relative">
-        <section>
+        <section className={`max-[701px]:hidden`}>
           <Image
             src={"/section_top_icons.svg"}
             className="m-auto w-auto h-30"
@@ -16,11 +16,11 @@ export default function AboutSection() {
           ></Image>
         </section>
 
-        <section className="grid grid-cols-2 pt-30">
+        <section className="grid grid-cols-2 gap-5 pt-30 items-center max-[701px]:grid-cols-1 max-[701px]:pt-0">
           <div className="grid gap-12">
-            <section className="p-1 bg-[#12F7D6] w-fit rounded-full">
+            <section className="p-1 bg-[#12F7D6] w-fit rounded-full max-[701px]:m-auto">
               <h1
-                className={`${ubuntu.className} capitalize w-fit bg-[#292F36] text-3xl font-light px-10 py-6 rounded-full text-white`}
+                className={`${ubuntu.className} capitalize w-fit bg-[#292F36] text-3xl font-light px-10 py-6 rounded-full text-white max-[701px]:text-xl max-[701px]:py-4`}
               >
                 About me
               </h1>
@@ -65,7 +65,15 @@ export default function AboutSection() {
             </div>
           </div>
 
-          <div className={``}></div>
+          <div className={``}>
+            <Image
+              src={"/about_image.jpg"}
+              alt="About Image"
+              width={1000}
+              height={1000}
+              className="max-w-[400px] min-w-0 w-full m-auto rounded-2xl"
+            />
+          </div>
         </section>
       </div>
     </section>
