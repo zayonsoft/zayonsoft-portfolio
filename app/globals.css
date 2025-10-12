@@ -17,3 +17,9 @@
   background-size: cover;
   background-position: center;
 }
+
+.skills-bg {
+  background-image: url(../public/skills_bg.png);
+  background-size: cover;
+  background-position: center;
+}

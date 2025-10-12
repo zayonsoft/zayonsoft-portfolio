@@ -2,6 +2,7 @@ import AboutSection from "@/components/landing/AboutSection";
 import FixedBar from "@/components/landing/FixedBar";
 import Main from "@/components/landing/Main";
 import Nav from "@/components/landing/Nav";
+import Skills from "@/components/landing/Skills";
 
 export default function Home() {
   return (
@@ -15,6 +16,9 @@ export default function Home() {
       </div>
       <div>
         <AboutSection />
+      </div>
+      <div>
+        <Skills />
       </div>
     </section>
   );
