@@ -1,11 +1,13 @@
 import Image from "next/image";
 import { ubuntu } from "./Main";
+import CoreSkills from "./CoreSkills";
+import FancyUnderline from "../general/FancyUnderline";
 
 export default function Skills() {
   return (
     <section className="bg-[#292F36] relative px-20 max-[901px]:px-10 max-[701px]:px-5 py-20 max-[701px]:py-10">
       <div className="skills-bg absolute top-0 bottom-0 left-0 right-0 opacity-10"></div>
-      <div>
+      <div className="relative grid gap-50">
         <section className={`max-[701px]:hidden grid gap-25`}>
           <div className="grid gap-10">
             <Image
@@ -15,18 +17,12 @@ export default function Skills() {
               height={100}
               alt="Design Icon"
             ></Image>
-            <div className="grid gap-1 justify-items-center">
+            <div className="grid gap-2 justify-items-center w-fit justify-self-center">
               <h1 className={`text-[#12F7D6] text-3xl ${ubuntu.className}`}>
                 Skills
               </h1>
-              <div>
-                <Image
-                  className="w-full"
-                  src={"/classic_underline.svg"}
-                  height={100}
-                  width={100}
-                  alt="Underline"
-                />
+              <div className="w-full">
+                <FancyUnderline />
               </div>
             </div>
           </div>
@@ -40,6 +36,7 @@ export default function Skills() {
             />
           </div>
         </section>
+        <CoreSkills />
       </div>
     </section>
   );
