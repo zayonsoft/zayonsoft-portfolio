@@ -23,3 +23,31 @@
   background-size: cover;
   background-position: center;
 }
+
+.work-bg {
+  background-image: url(../public/my_work_bg.png);
+  background-size: 400px;
+  background-repeat: repeat;
+}
+
+.project-text {
+  background: linear-gradient(
+    270deg,
+    rgba(18, 247, 214, 0.15) 0%,
+    rgba(18, 247, 214, 0.15) 100%
+  );
+  backdrop-filter: blur(70px) contrast(0.8) brightness(0.8);
+  background-size: cover;
+}
+
+.ptext-overlay {
+  background: radial-gradient(
+      90.16% 143.01% at 15.32% 21.04%,
+      rgba(18, 247, 214, 0.2) 0%,
+      rgba(18, 247, 214, 0.0447917) 77.08%,
+      rgba(18, 247, 214, 0) 100%
+    ),
+    url(../public/shocase_imgs/ptext_bg.png);
+
+  background-size: cover;
+}
