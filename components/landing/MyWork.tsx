@@ -1,6 +1,5 @@
 import Image from "next/image";
 import FancyUnderline from "../general/FancyUnderline";
-import CoreSkills from "./CoreSkills";
 import { ibmPlexMono, ubuntu } from "./Main";
 import Projects from "./Projects";
 

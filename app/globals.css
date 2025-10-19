@@ -32,11 +32,17 @@
 
 .project-text {
   background: linear-gradient(
-    270deg,
-    rgba(18, 247, 214, 0.15) 0%,
-    rgba(18, 247, 214, 0.15) 100%
-  );
-  backdrop-filter: blur(70px) contrast(0.8) brightness(0.8);
+      270deg,
+      rgba(18, 247, 214, 0.15) 0%,
+      rgba(18, 247, 214, 0.15) 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+  background-size: cover;
+}
+
+.ptext-cover {
+  background: url(../public/showcase_imgs/ptext_bg.png);
   background-size: cover;
 }
 
@@ -46,8 +52,15 @@
       rgba(18, 247, 214, 0.2) 0%,
       rgba(18, 247, 214, 0.0447917) 77.08%,
       rgba(18, 247, 214, 0) 100%
-    ),
-    url(../public/shocase_imgs/ptext_bg.png);
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  backdrop-filter: blur(80px);
+}
 
-  background-size: cover;
+.proj-gradient {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(18, 247, 214, 0.25) 0%,
+    rgba(30, 93, 84, 0) 100%
+  );
 }
