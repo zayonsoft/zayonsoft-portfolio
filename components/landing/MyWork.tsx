@@ -7,7 +7,7 @@ export default function MyWork() {
   return (
     <section className="bg-[#1A1E23] relative py-20 max-[701px]:py-10">
       <div className="work-bg absolute top-0 bottom-0 left-0 right-0 opacity-30"></div>
-      <div className="relative grid gap-30">
+      <div className="relative grid gap-20">
         <section className={`grid gap-25`}>
           <div className="grid gap-10">
             <Image
@@ -32,7 +32,7 @@ export default function MyWork() {
             </p>
           </div>
         </section>
-        <div className="px-20 max-[901px]:px-10 max-[701px]:px-5">
+        <div className="px-20 max-[901px]:px-10 max-[701px]:px-5 overflow-x-hidden">
           <Projects />
         </div>
       </div>

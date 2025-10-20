@@ -1,11 +1,14 @@
 import Image from "next/image";
 import { ibmPlexMono } from "./Main";
+import Link from "next/link";
+import { FiExternalLink } from "react-icons/fi";
+import { HiOutlineExternalLink } from "react-icons/hi";
 export default function Project() {
   return (
     <section>
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-2 gap-5 py-30">
         {/* Desc */}
-        <section className="self-center">
+        <section className="grid self-center">
           <div className={`grid gap-0.5 ${ibmPlexMono.className}`}>
             <p
               className={`flex text-sm items-center gap-2 text-[#12F7D6] font-medium`}
@@ -28,12 +31,24 @@ export default function Project() {
                 across Semesters and Session.
               </p>
             </div>
+
+            <div>
+              <Link
+                className="flex gap-1 items-center p-2.5 bg-white w-fit text-[15px] rounded-full text-[#292F36]"
+                href={"#"}
+              >
+                <span>View Project</span>
+                <span>
+                  <HiOutlineExternalLink size={22} strokeWidth={1.2} />
+                </span>
+              </Link>
+            </div>
           </div>
         </section>
         {/* Image Section below */}
         <section className="relative">
           {/* The glow at the back of the image */}
-          <div className="absolute left-0 right-0 -top-[30%] -bottom-[10%] overflow">
+          <div className="absolute left-0 -right-[10%] -top-[25%] -bottom-[25%] overflow">
             <div className="absolute proj-gradient top-0 bottom-0 left-[-20%] right-[30%]"></div>
             <div className="absolute proj-gradient top-0 bottom-0 left-0 right-[-5%]"></div>
           </div>
