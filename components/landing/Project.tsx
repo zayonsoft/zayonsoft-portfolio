@@ -8,18 +8,22 @@ export default function Project() {
     <section>
       <div className="grid grid-cols-2 gap-5 py-30">
         {/* Desc */}
-        <section className="grid self-center">
-          <div className={`grid gap-0.5 ${ibmPlexMono.className}`}>
-            <p
-              className={`flex text-sm items-center gap-2 text-[#12F7D6] font-medium`}
-            >
-              <span>Personal Project</span>
-              <span className="bg-[#12F7D6] h-1 w-1 rounded-full block"></span>
-              <span className="">2024</span>
-            </p>
-            <h1 className={`text-3xl text-white tracking-wider font-medium`}>
-              CGPA Calculator
-            </h1>
+        <section className="grid items-center">
+          <div
+            className={`grid items-center max-h-fit min-h-[300px] gap-2 ${ibmPlexMono.className}`}
+          >
+            <div className="grid gap-0">
+              <p
+                className={`flex text-sm items-center gap-2 text-[#12F7D6] font-medium`}
+              >
+                <span>Personal Project</span>
+                <span className="bg-[#12F7D6] h-1 w-1 rounded-full block"></span>
+                <span className="">2024</span>
+              </p>
+              <h1 className={`text-3xl text-white tracking-wider font-medium`}>
+                CGPA Calculator
+              </h1>
+            </div>
             <div className="relative project-text rounded-xl">
               <div className="absolute top-0 right-0 bottom-0 left-0 rounded-xl ptext-overlay"></div>
               <div className="absolute top-0 right-0 bottom-0 left-0 ptext-cover rounded-xl opacity-[8%]"></div>
