@@ -6,7 +6,7 @@ import { ubuntu } from "./Main";
 export default function Footer() {
   return (
     <section
-      className={`${ubuntu.className} border-t border-t-[#43454D] font-light text-sm flex justify-between items-center bg-[#1A1E23] px-20 max-[901px]:px-10 max-[701px]:px-5 py-4 max-[701px]:flex-col max-[701px]:gap-3.5`}
+      className={`${ubuntu.className} border-t border-t-[#43454D] font-extralight text-sm flex justify-between items-center bg-[#1A1E23] px-20 max-[901px]:px-10 max-[701px]:px-5 py-4 max-[701px]:flex-col max-[701px]:gap-3.5`}
     >
       <div className="max-[701px]:order-2">
         <p className="text-white">
