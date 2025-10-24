@@ -58,11 +58,12 @@ export default function Contact() {
                 <div className={`grid gap-2.5 ${ubuntu.className} `}>
                   <label
                     className={`text-[#12F7D6] text-sm w-fit font-light`}
-                    htmlFor="name"
+                    htmlFor="sender-mail"
                   >
                     Your email *
                   </label>
                   <input
+                    id="sender-mail"
                     name="text"
                     type="text"
                     placeholder="Enter your email"
