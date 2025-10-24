@@ -1,4 +1,5 @@
 import AboutSection from "@/components/landing/AboutSection";
+import Contact from "@/components/landing/Contact";
 import FixedBar from "@/components/landing/FixedBar";
 import Main from "@/components/landing/Main";
 import MyWork from "@/components/landing/MyWork";
@@ -23,6 +24,9 @@ export default function Home() {
       </div>
       <div>
         <MyWork />
+      </div>
+      <div>
+        <Contact />
       </div>
     </section>
   );

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "b5f1247c-1148-42f2-855d-34e74e1e08ba",
+    "name": "CGPA Calculator",
+    "preview_image": "",
+    "hero_images": ["", ""],
+    "year": "2024",
+    "type": "Personal  Project",
+    "overview": "A web-based and highly interactive application that collects the course information of students along with their Grades in those courses and uses the info to calculate the Grade Point Average (GPA) as well as the Cumulative Grade Point Average (CGPA) across Semesters and Session.",
+    "problem": "A discovered many students have no idea about how to calculate their Cumulative Grade Point Average (CGPA) and after the CGPA calculation segment of our institution’s result processing software experienced a downtime I felt the need to create a platform that enables students calculate their Grade Points seamlessly and also track their academic performance.",
+    "project_images": [
+      ["", ""],
+      ["", ""],
+      ["", ""]
+    ],
+    "tech_stack_image": [""],
+    "features": [
+      "Support For Both 4-Point and 5-Point Grading systems (Students can only select one)",
+      "Students can enter course details (Course code, course title, units, grade)",
+      "Grade Point Average (GPA) calculation for individual semesters.",
+      "Cumulative Grade Point Average (CGPA) calculation across sessions.",
+      "User-friendly interface with organized input sections."
+    ],
+    "flow": [
+      "Users enter their email for account creation and they get sent a confirmation code",
+      "If confirmation code is valid, then the user’s account gets created",
+      "If confirmation code is valid, then the user’s account gets created",
+      "Users can now login with their username or email and password",
+      "Users fill in info and choose their grading system",
+      "Add a session or level",
+      "Enter course details for respective sessions",
+      "Enter grades for the specific courses",
+      "Then the software computes the GPA for the system",
+      "The results are stored and used to calculate cumulative GPA for multiple semesters / sessions"
+    ],
+    "design_principles": [
+      "Simple and Intuitive User Interface (UI)",
+      "Accurate Computations"
+    ],
+    "challenges_solutions": [
+      {
+        "challenge": "Handling of multiple grading systems (4-point and 5-point grading system)",
+        "solution": "Design the database in such a way that it easily incorporates multiple grading systems"
+      }
+    ],
+    "live_demo_link": "",
+    "source_code_link": "",
+    "role": {
+      "title": "Solo developer",
+      "desc": "Built and designed the entire project – frontend, backend, database logic and deployment."
+    }
+  },
+  { "id": "a261ab97-628d-4b42-850a-9ae7466e9565", "name": "Precious" },
+  { "id": "5b3c570d-c46d-4f14-9bf5-fda9c7f3db89", "name": "Precious" },
+  { "id": "46ed8ca2-11e0-4593-9fbb-70c0efd4562c", "name": "Precious" },
+  { "id": "98b41822-ef0b-46fe-87df-eeddc061cdc2", "name": "Precious" }
+]
