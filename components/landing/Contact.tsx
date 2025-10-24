@@ -74,7 +74,7 @@ export default function Contact() {
               <ContactTextarea />
               <section>
                 <button
-                  className={`flex cursor-pointer items-center font-normal m-auto rounded-full text-[#292F36] bg-[#12F7D6] py-2.5 px-6 text-lg gap-2 ${ubuntu.className}`}
+                  className={`custom-transition flex cursor-pointer items-center font-normal m-auto rounded-full text-[#292F36] bg-[#12F7D6] hover:bg-[#98FAEC] py-2.5 px-6 text-lg gap-2 ${ubuntu.className}`}
                 >
                   <span>Send Message</span>
                   <span>
