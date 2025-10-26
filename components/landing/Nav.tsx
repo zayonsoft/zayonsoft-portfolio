@@ -115,7 +115,7 @@ export default function Nav() {
               <section className="">
                 <div className="grid items-center py-6">
                   <button
-                    className="cursor-pointer text-white text-2xl"
+                    className="cursor-pointer w-fit text-white text-2xl"
                     onClick={closeAside}
                     type="button"
                   >

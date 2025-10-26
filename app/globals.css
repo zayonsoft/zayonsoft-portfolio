@@ -76,3 +76,23 @@
 .text-area-scroll::-webkit-scrollbar-thumb {
   height: 2px;
 }
+
+.pop-logo {
+  background: url(../public/logo_pulse.svg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: scale 2s ease-in-out infinite;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
