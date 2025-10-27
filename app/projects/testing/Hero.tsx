@@ -18,7 +18,7 @@ export default function Hero({
   hero_img2,
 }: HeroProps) {
   return (
-    <section className="grid gap-10 py-10 pb-20">
+    <section className="grid gap-10 py-10 pb-20  px-20 max-[901px]:px-10 max-[701px]:px-5">
       <div
         className={`${ibmPlexMono.className} flex justify-between items-center max-[701px]:grid max-[701px]:justify-stretch max-[701px]:gap-1`}
       >
@@ -36,7 +36,7 @@ export default function Hero({
         <div className="relative grid gap-30 grid-cols-2 max-[901px]:gap-20 max-[701px]:gap-10 max-[701px]:grid-cols-1">
           <div>
             <Image
-              className="h-auto rounded-xl border-[#12F7D6] border-[1.5px] select-none"
+              className="h-full rounded-xl border-[#12F7D6] border-[1.5px] select-none"
               src={hero_img1}
               width={10000}
               height={1000}
@@ -46,7 +46,7 @@ export default function Hero({
           </div>
           <div>
             <Image
-              className="h-auto rounded-xl border-[#12F7D6] border-[1.5px] select-none"
+              className="h-full rounded-xl border-[#12F7D6] border-[1.5px] select-none"
               src={hero_img2}
               width={10000}
               height={1000}

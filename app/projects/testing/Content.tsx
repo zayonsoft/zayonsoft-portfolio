@@ -3,6 +3,7 @@ import path from "path";
 import { BsFillEmojiFrownFill } from "react-icons/bs";
 import Hero from "./Hero";
 import Motivation from "./Motivation";
+import ProjectPics1 from "./ProjectPics1";
 
 type DataProps = {
   id: string;
@@ -13,7 +14,7 @@ type DataProps = {
   type: string;
   overview: string;
   problem: string;
-  project_images: string[];
+  project_images: [string[]];
   tech_stack_image: string[];
   features: string[];
   flow: string[];
@@ -45,6 +46,10 @@ export default async function Content() {
             hero_img2={data.hero_images[1]}
           />
           <Motivation problem={data.problem} />
+
+          <div className="overflow-hidden">
+            <ProjectPics1 image_urls={data.project_images[0]} />
+          </div>
         </section>
       );
     } else {

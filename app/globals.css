@@ -18,6 +18,7 @@
   background-position: center;
 }
 
+/* Code background too */
 .skills-bg {
   background-image: url(../public/skills_bg.png);
   background-size: cover;
@@ -87,6 +88,14 @@
   background-position: center;
   background-repeat: no-repeat;
   animation: scale 8s ease-in-out infinite;
+}
+
+.project-img-gradient {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(18, 247, 214, 0.25) 0%,
+    rgba(30, 93, 84, 0) 100%
+  );
 }
 
 @keyframes scale {
