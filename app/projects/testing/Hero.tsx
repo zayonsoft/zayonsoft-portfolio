@@ -18,7 +18,7 @@ export default function Hero({
   hero_img2,
 }: HeroProps) {
   return (
-    <section className="grid gap-10 py-10">
+    <section className="grid gap-10 py-10 pb-20">
       <div
         className={`${ibmPlexMono.className} flex justify-between items-center max-[701px]:grid max-[701px]:justify-stretch max-[701px]:gap-1`}
       >
@@ -36,27 +36,30 @@ export default function Hero({
         <div className="relative grid gap-30 grid-cols-2 max-[901px]:gap-20 max-[701px]:gap-10 max-[701px]:grid-cols-1">
           <div>
             <Image
-              className="h-auto rounded-xl border-[#12F7D6] border-[1.5px]"
+              className="h-auto rounded-xl border-[#12F7D6] border-[1.5px] select-none"
               src={hero_img1}
               width={10000}
               height={1000}
               alt="Hero Image 1"
+              draggable={false}
             />
           </div>
           <div>
             <Image
-              className="h-auto rounded-xl border-[#12F7D6] border-[1.5px]"
+              className="h-auto rounded-xl border-[#12F7D6] border-[1.5px] select-none"
               src={hero_img2}
               width={10000}
               height={1000}
               alt="Hero Image 2"
+              draggable={false}
             />
           </div>
         </div>
       </div>
       <div className="relative">
+        <div className="absolute rounded-xl text-bg-design left-0 right-0 top-0 bottom-0 opacity-[8%]"></div>
         <p
-          className={`text-white ${ibmPlexMono.className} tracking-wide font-medium text-sm max-[701px]:font-normal max-[701px]:text-[13px]`}
+          className={`relative rounded-xl p-5 text-white ${ibmPlexMono.className} font-normal text-sm max-[701px]:font-normal max-[701px]:text-[13px]`}
         >
           {overview}
         </p>

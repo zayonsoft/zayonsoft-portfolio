@@ -77,6 +77,10 @@
   height: 2px;
 }
 
+.text-bg-design {
+  background: url(../public/showcase_imgs/ptext_bg.png);
+}
+
 .pop-logo {
   background: url(../public/logo_pulse.svg);
   background-size: 100%;

@@ -2,6 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 import { BsFillEmojiFrownFill } from "react-icons/bs";
 import Hero from "./Hero";
+import Motivation from "./Motivation";
 
 type DataProps = {
   id: string;
@@ -11,6 +12,7 @@ type DataProps = {
   year: string;
   type: string;
   overview: string;
+  problem: string;
   project_images: string[];
   tech_stack_image: string[];
   features: string[];
@@ -42,6 +44,7 @@ export default async function Content() {
             hero_img1={data.hero_images[0]}
             hero_img2={data.hero_images[1]}
           />
+          <Motivation problem={data.problem} />
         </section>
       );
     } else {
