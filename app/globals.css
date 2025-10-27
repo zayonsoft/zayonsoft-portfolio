@@ -82,7 +82,7 @@
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  animation: scale 2s ease-in-out infinite;
+  animation: scale 8s ease-in-out infinite;
 }
 
 @keyframes scale {
@@ -90,8 +90,9 @@
     transform: scale(1);
   }
   50% {
-    transform: scale(1.02);
+    transform: scale(0.61);
   }
+
   100% {
     transform: scale(1);
   }

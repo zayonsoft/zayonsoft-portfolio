@@ -4,28 +4,49 @@ import { BsFillEmojiFrownFill } from "react-icons/bs";
 import Hero from "./Hero";
 
 type DataProps = {
-    id:string;
-    name:string;
-    preview_image:string;
-    hero_images:string[];
-    year:string;
-    overview:string;
-    project_images:string[];
-    tech_stack_image:string[];
-}
+  id: string;
+  name: string;
+  preview_image: string;
+  hero_images: string[];
+  year: string;
+  type: string;
+  overview: string;
+  project_images: string[];
+  tech_stack_image: string[];
+  features: string[];
+  flow: string[];
+  design_principles: string[];
+  challenges_solutions: { challenge: string; solution: string }[];
+  live_demo_link: string;
+  source_code_link: string;
+  role: { title: string; desc: string }[];
+};
 
 export default async function Content() {
+  const id = "b5f1247c-1148-42f2-855d-34e74e1e08ba"; //will be dynamically gotten
   try {
     const filePath = path.join(process.cwd(), "public", "data", "data.json");
     const file = await fs.readFile(filePath, "utf-8");
-    const data = JSON.parse(file);
+    const dataset = JSON.parse(file) as DataProps[];
+    const data = dataset.find((project) => project.id == id);
     console.log(data);
 
-    return (
-      <section>
-        <Hero name="" overview="" type="" year="" />
-      </section>
-    );
+    if (data) {
+      return (
+        <section>
+          <Hero
+            name={data.name}
+            overview={data.overview}
+            type={data.type}
+            year={data.year}
+            hero_img1={data.hero_images[0]}
+            hero_img2={data.hero_images[1]}
+          />
+        </section>
+      );
+    } else {
+      throw new Error("Couldn't Load Data");
+    }
   } catch {
     return (
       <h1 className="grid gap-1 justify-items-center py-20 text-[#12F7D6] text-xl">
