@@ -13,7 +13,12 @@
       ["/cgpa_calculator/project10.png", "/cgpa_calculator/project11.png"],
       ["/cgpa_calculator/project20.png", "/cgpa_calculator/project21.png"]
     ],
-    "tech_stack_image": [""],
+    "tech_stack_image": [
+      "/cgpa_calculator/stack1.svg",
+      "/cgpa_calculator/stack2.svg",
+      "/cgpa_calculator/stack3.svg",
+      "/cgpa_calculator/stack4.svg"
+    ],
     "features": [
       "Support For Both 4-Point and 5-Point Grading systems (Students can only select one)",
       "Students can enter course details (Course code, course title, units, grade)",

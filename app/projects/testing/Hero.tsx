@@ -32,7 +32,7 @@ export default function Hero({
         </p>
       </div>
       <div className="relative w-full">
-        <div className="pop-logo absolute -translate-x-1/2 left-1/2 w-full max-w-[780px] -top-6 -bottom-10"></div>
+        <div className="pop-logo absolute -translate-x-1/2 left-1/2 w-full max-w-[780px] -top-10 -bottom-20"></div>
         <div className="relative grid gap-30 grid-cols-2 max-[901px]:gap-20 max-[701px]:gap-10 max-[701px]:grid-cols-1">
           <div>
             <Image

@@ -6,6 +6,7 @@ import Motivation from "./Motivation";
 import ProjectPics1 from "./ProjectPics1";
 import ProjectPics2 from "./ProjectPics2";
 import ProjectPics3 from "./ProjectPics3";
+import TechStack from "./TechStack";
 
 type DataProps = {
   id: string;
@@ -57,6 +58,9 @@ export default async function Content() {
           </div>
           <div className="overflow-hidden">
             <ProjectPics3 image_urls={data.project_images[2]} />
+          </div>
+          <div>
+            <TechStack stack_images={data.tech_stack_image} />
           </div>
         </section>
       );
