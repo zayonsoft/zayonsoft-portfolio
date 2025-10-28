@@ -9,6 +9,7 @@ import ProjectPics3 from "./ProjectPics3";
 import TechStack from "./TechStack";
 import Features from "./Features";
 import ArchitectureDesign from "./ArchitectureDesign";
+import StructureFlow from "./StructureFlow";
 
 type DataProps = {
   id: string;
@@ -69,6 +70,9 @@ export default async function Content() {
           </div>
           <div>
             <ArchitectureDesign />
+          </div>
+          <div>
+            <StructureFlow />
           </div>
         </section>
       );
