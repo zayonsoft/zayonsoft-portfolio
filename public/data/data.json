@@ -10,8 +10,8 @@
     "problem": "I discovered many students have no idea about how to calculate their Cumulative Grade Point Average (CGPA) and after the CGPA calculation segment of our institution’s result processing software experienced a downtime I felt the need to develop a platform that enables students calculate their Grade Points seamlessly and also track their academic performance.",
     "project_images": [
       ["/cgpa_calculator/project00.png", "/cgpa_calculator/project01.png"],
-      ["", ""],
-      ["", ""]
+      ["/cgpa_calculator/project10.png", "/cgpa_calculator/project11.png"],
+      ["/cgpa_calculator/project20.png", "/cgpa_calculator/project21.png"]
     ],
     "tech_stack_image": [""],
     "features": [
