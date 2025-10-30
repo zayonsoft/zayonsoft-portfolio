@@ -5,9 +5,10 @@ import { v4 } from "uuid";
 
 export default function StructureFlow({}) {
   return (
-    <section className="bg-[#1A1E23] relative py-20 max-[701px]:py-10">
+    <section className="bg-[#1A1E23] relative min-h-[500px] py-20 max-[701px]:py-10">
       <div className="work-bg absolute top-0 bottom-0 left-0 right-0 opacity-30"></div>
-      <div className="relative grid gap-20 px-20 max-[901px]:px-10 max-[701px]:px-5 ">
+      <div className="bg-z absolute h-[400px] w-[508px] max-[701px]:h-[276px] max-[701px]:w-[350px] -translate-y-1/2 top-1/2 right-20 max-[901px]:right-10 max-[701px]:right-5 opacity-5"></div>
+      <div className="relative grid gap-20 px-20 max-[901px]:px-10 max-[701px]:px-5">
         <div className="grid gap-10">
           <div className="grid gap-3.5 justify-items-center w-fit justify-self-center">
             <h1 className={`text-[#12F7D6] text-3xl ${ubuntu.className}`}>

@@ -110,3 +110,10 @@
     transform: scale(1);
   }
 }
+
+.bg-z {
+  background: url(../public/structural_z.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
