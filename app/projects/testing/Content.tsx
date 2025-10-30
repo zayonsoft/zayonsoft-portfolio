@@ -10,6 +10,7 @@ import TechStack from "./TechStack";
 import Features from "./Features";
 import ArchitectureDesign from "./ArchitectureDesign";
 import StructureFlow from "./StructureFlow";
+import DesignPrinciples from "./DesignPrinciples";
 
 type DataProps = {
   id: string;
@@ -73,6 +74,9 @@ export default async function Content() {
           </div>
           <div>
             <StructureFlow />
+          </div>
+          <div>
+            <DesignPrinciples design_principles={data.design_principles} />
           </div>
         </section>
       );
