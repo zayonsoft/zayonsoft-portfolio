@@ -11,7 +11,9 @@ export default function StructureFlow({}) {
       <div className="relative grid gap-20 px-20 max-[901px]:px-10 max-[701px]:px-5">
         <div className="grid gap-10">
           <div className="grid gap-3.5 justify-items-center w-fit justify-self-center">
-            <h1 className={`text-[#12F7D6] text-3xl ${ubuntu.className}`}>
+            <h1
+              className={`text-[#12F7D6] capitalize text-3xl ${ubuntu.className}`}
+            >
               Structure / Flow
             </h1>
             <div className="w-full">

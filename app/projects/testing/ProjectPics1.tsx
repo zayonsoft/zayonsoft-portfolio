@@ -12,7 +12,9 @@ export default function ProjectPics1({ image_urls }: ProjectPicsProps) {
       <div className="absolute skills-bg top-0 right-0 bottom-0 left-0 opacity-[10%]"></div>
       <div className="relative grid py-15 gap-15 px-20 max-[901px]:px-10 max-[701px]:px-5 max-[701px]:py-8">
         <div className="grid gap-3.5 justify-items-center w-fit justify-self-center">
-          <h1 className={`text-[#12F7D6] text-3xl ${ubuntu.className}`}>
+          <h1
+            className={`text-[#12F7D6] capitalize text-3xl ${ubuntu.className}`}
+          >
             Project Pictures
           </h1>
           <div className="w-full">

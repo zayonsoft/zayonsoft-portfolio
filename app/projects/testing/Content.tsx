@@ -11,6 +11,7 @@ import Features from "./Features";
 import ArchitectureDesign from "./ArchitectureDesign";
 import StructureFlow from "./StructureFlow";
 import DesignPrinciples from "./DesignPrinciples";
+import ChallengesSolution from "./ChallengesSolutions";
 
 type DataProps = {
   id: string;
@@ -77,6 +78,11 @@ export default async function Content() {
           </div>
           <div>
             <DesignPrinciples design_principles={data.design_principles} />
+          </div>
+          <div>
+            <ChallengesSolution
+              challenges_solutions={data.challenges_solutions}
+            />
           </div>
         </section>
       );

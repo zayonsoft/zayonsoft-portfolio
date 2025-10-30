@@ -117,3 +117,13 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.dividing-line {
+  background: linear-gradient(
+    90deg,
+    #12f7d6 0%,
+    rgba(18, 247, 214, 0) 25%,
+    rgba(18, 247, 214, 0) 75%,
+    #12f7d6 100%
+  );
+}

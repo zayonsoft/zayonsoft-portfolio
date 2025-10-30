@@ -11,7 +11,9 @@ export default function DesignPrinciples({ design_principles }: DpProps) {
   return (
     <section className="grid py-15 gap-10  px-20 max-[901px]:px-10 max-[701px]:px-5">
       <div className="grid gap-3.5 justify-items-center w-fit justify-self-center">
-        <h1 className={`text-[#12F7D6] text-3xl ${ubuntu.className}`}>
+        <h1
+          className={`text-[#12F7D6] capitalize text-3xl ${ubuntu.className}`}
+        >
           Design Principles
         </h1>
         <div className="w-full">
