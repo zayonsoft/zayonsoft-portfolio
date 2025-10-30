@@ -80,6 +80,8 @@
 
 .text-bg-design {
   background: url(../public/showcase_imgs/ptext_bg.png);
+  background-position: center;
+  background-size: cover;
 }
 
 .pop-logo {
@@ -127,3 +129,7 @@
     #12f7d6 100%
   );
 }
+/* 
+.blur-text-bg {
+  backdrop-filter: blur(80px);
+} */

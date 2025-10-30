@@ -64,11 +64,8 @@ export default function ChallengesSolution({ challenges_solutions }: CSProps) {
 
             {/* Solution */}
             <section className="grid gap-1">
-              <div
-                key={v4()}
-                className="relative grid grid-cols-[auto_1fr] gap-2.5 items-center"
-              >
-                <div className="">
+              <div className="relative grid grid-cols-[auto_1fr] gap-2.5 items-center">
+                <div>
                   <Image
                     src={"/star_icon.svg"}
                     className="w-5 h-5 select-none"

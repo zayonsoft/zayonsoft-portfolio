@@ -12,6 +12,7 @@ import ArchitectureDesign from "./ArchitectureDesign";
 import StructureFlow from "./StructureFlow";
 import DesignPrinciples from "./DesignPrinciples";
 import ChallengesSolution from "./ChallengesSolutions";
+import DemoLink from "./DemoLinks";
 
 type DataProps = {
   id: string;
@@ -30,7 +31,7 @@ type DataProps = {
   challenges_solutions: { challenge: string; solution: string }[];
   live_demo_link: string;
   source_code_link: string;
-  role: { title: string; desc: string }[];
+  role: { title: string; desc: string };
 };
 
 export default async function Content() {
@@ -82,6 +83,13 @@ export default async function Content() {
           <div>
             <ChallengesSolution
               challenges_solutions={data.challenges_solutions}
+            />
+          </div>
+          <div>
+            <DemoLink
+              live_demo_link={data.live_demo_link}
+              source_code_link={data.source_code_link}
+              role={data.role}
             />
           </div>
         </section>
