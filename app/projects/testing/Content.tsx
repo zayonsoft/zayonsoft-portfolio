@@ -13,6 +13,8 @@ import StructureFlow from "./StructureFlow";
 import DesignPrinciples from "./DesignPrinciples";
 import ChallengesSolution from "./ChallengesSolutions";
 import DemoLink from "./DemoLinks";
+import Contact from "@/components/landing/Contact";
+import Footer from "@/components/landing/Footer";
 
 type DataProps = {
   id: string;
@@ -75,7 +77,7 @@ export default async function Content() {
             <ArchitectureDesign />
           </div>
           <div>
-            <StructureFlow />
+            <StructureFlow flow={data.flow} />
           </div>
           <div>
             <DesignPrinciples design_principles={data.design_principles} />
@@ -91,6 +93,12 @@ export default async function Content() {
               source_code_link={data.source_code_link}
               role={data.role}
             />
+          </div>
+          <div>
+            <Contact />
+          </div>
+          <div>
+            <Footer />
           </div>
         </section>
       );

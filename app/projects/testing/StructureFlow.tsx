@@ -1,9 +1,30 @@
+"use client";
 import FancyUnderline from "@/components/general/FancyUnderline";
 import { ibmPlexMono, ubuntu } from "@/components/landing/Main";
 import Image from "next/image";
 import { v4 } from "uuid";
+import { useEffect, useState } from "react";
 
-export default function StructureFlow({}) {
+type FlowProps = {
+  flow: string[];
+};
+
+export default function StructureFlow({ flow }: FlowProps) {
+  const [flowData, SetFlowData] = useState<Record<string, any>[]>([
+    { "0": true },
+  ]);
+
+  function updateFlows() {
+    let x = flow.map((each, index) => {
+      console.log(each);
+      SetFlowData((theflow) => ({ ...theflow, [`${index}`]: "false" }));
+    });
+  }
+
+  useEffect(() => {
+    updateFlows();
+  }, []);
+
   return (
     <section className="bg-[#1A1E23] relative min-h-[500px] py-20 max-[701px]:py-10">
       <div className="work-bg absolute top-0 bottom-0 left-0 right-0 opacity-30"></div>
@@ -21,39 +42,44 @@ export default function StructureFlow({}) {
             </div>
           </div>
         </div>
-        <section className="grid gap-8.5">
-          <section
-            key={v4()}
-            className="relative grid grid-cols-[auto_1fr] gap-2.5 items-start"
-          >
-            <div className="">
-              <Image
-                src={"/star_icon.svg"}
-                className="w-5 h-5 select-none"
-                height={100}
-                width={100}
-                alt="."
-                draggable={false}
-              />
-            </div>
-            <div>
-              <p className={`${ibmPlexMono.className} text-white text-sm`}>
-                Non-registered users will visit the registration page while
-                registered users just login with their username or email and
-                password
-              </p>
-            </div>
-            {/* Design B4 Next Flow */}
-            <div className="absolute w-5 top-[10px] grid justify-center">
-              <Image
-                src={"/joining_line.svg"}
-                className="w-[1px]"
-                height={100}
-                width={100}
-                alt=""
-              />
-            </div>
-          </section>
+        <section className="grid gap-14">
+          {flow.map((step, index, array) => (
+            <section
+              key={v4()}
+              className="relative grid grid-cols-[auto_1fr] gap-2.5 items-start"
+            >
+              <div className="relative">
+                <Image
+                  src={"/star_icon.svg"}
+                  className={`w-5 h-5 select-none ${
+                    index == 0 ? "opacity-100" : "opacity-30"
+                  }`}
+                  height={100}
+                  width={100}
+                  alt="."
+                  draggable={false}
+                />
+              </div>
+              <div className="absolute left-[45px]">
+                <p className={`${ibmPlexMono.className} text-white text-sm`}>
+                  {step}
+                </p>
+              </div>
+              {/* Design B4 Next Flow */}
+              {array.length - 1 == index ? null : (
+                <div className="absolute w-5 top-0 grid justify-center opacity-30 select-none">
+                  <Image
+                    src={"/joining_line.svg"}
+                    className="w-[1px]"
+                    height={100}
+                    width={100}
+                    alt=""
+                    draggable={false}
+                  />
+                </div>
+              )}
+            </section>
+          ))}
         </section>
       </div>
     </section>
