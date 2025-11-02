@@ -1,8 +1,8 @@
 "use client";
 import FancyUnderline from "@/components/general/FancyUnderline";
 import { ibmPlexMono, ubuntu } from "@/components/landing/Main";
-import Image from "next/image";
 import { v4 } from "uuid";
+import Flow from "./Flow";
 import { useEffect, useState } from "react";
 
 type FlowProps = {
@@ -10,19 +10,57 @@ type FlowProps = {
 };
 
 export default function StructureFlow({ flow }: FlowProps) {
-  const [flowData, SetFlowData] = useState<Record<string, any>[]>([
-    { "0": true },
-  ]);
+  const [currentFlow, setCurrentFlow] = useState<number>(0);
+  const [flowData, setFlowData] = useState<Record<string | number, any>>({
+    0: true,
+  });
 
-  function updateFlows() {
-    let x = flow.map((each, index) => {
-      console.log(each);
-      SetFlowData((theflow) => ({ ...theflow, [`${index}`]: "false" }));
+  useEffect(() => {
+    flow.map((_item, index, _array) => {
+      if (index != 0) {
+        setFlowData((prev) => ({ ...prev, [index]: false }));
+      }
     });
+  }, []);
+
+  useEffect(() => {
+    addOpacity(currentFlow);
+  }, [currentFlow]);
+
+  function fadeAll() {
+    let newData: any = { 0: true };
+    flow.map((_item, index, _array) => {
+      if (index != 0) {
+        newData[index] = false;
+      }
+    });
+    setFlowData(newData);
+    setCurrentFlow(0);
   }
 
   useEffect(() => {
-    updateFlows();
+    // console.log(flowData);
+  }, [flowData]);
+
+  function addOpacity(index: number) {
+    if (!(index > flow.length - 1)) {
+      setFlowData((prevData) => ({ ...prevData, [index]: true }));
+    } else {
+      fadeAll();
+    }
+  }
+
+  function incrementFlow() {
+    setCurrentFlow((prev) => prev + 1);
+  }
+
+  useEffect(() => {
+    let timerID = setInterval(() => {
+      incrementFlow();
+    }, 4000);
+    return () => {
+      clearInterval(timerID);
+    };
   }, []);
 
   return (
@@ -44,41 +82,7 @@ export default function StructureFlow({ flow }: FlowProps) {
         </div>
         <section className="grid gap-14">
           {flow.map((step, index, array) => (
-            <section
-              key={v4()}
-              className="relative grid grid-cols-[auto_1fr] gap-2.5 items-start"
-            >
-              <div className="relative">
-                <Image
-                  src={"/star_icon.svg"}
-                  className={`w-5 h-5 select-none ${
-                    index == 0 ? "opacity-100" : "opacity-30"
-                  }`}
-                  height={100}
-                  width={100}
-                  alt="."
-                  draggable={false}
-                />
-              </div>
-              <div className="absolute left-[45px]">
-                <p className={`${ibmPlexMono.className} text-white text-sm`}>
-                  {step}
-                </p>
-              </div>
-              {/* Design B4 Next Flow */}
-              {array.length - 1 == index ? null : (
-                <div className="absolute w-5 top-0 grid justify-center opacity-30 select-none">
-                  <Image
-                    src={"/joining_line.svg"}
-                    className="w-[1px]"
-                    height={100}
-                    width={100}
-                    alt=""
-                    draggable={false}
-                  />
-                </div>
-              )}
-            </section>
+            <Flow key={v4()} index={index} step={step} array={array} />
           ))}
         </section>
       </div>
