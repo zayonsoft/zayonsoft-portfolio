@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+@media screen and (max-width: 701px) {
+  .fix-body {
+    overflow-y: hidden;
+  }
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
 .custom-transition {
   transition: 0.8s ease-in-out;
 }

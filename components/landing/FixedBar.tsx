@@ -4,12 +4,12 @@ import { FiCode, FiHome, FiMonitor, FiUser } from "react-icons/fi";
 
 export default function FixedBar() {
   return (
-    <section className="left-3 fixed z-50 -translate-y-1/2 top-1/2">
-      <div className="rounded-full p-[1px] profile-pic">
-        <section className="grid gap-5 justify-self-center bg-black justify-items-center rounded-full p-2">
+    <section className="left-3 fixed z-50 -translate-y-1/2 top-1/2 max-[701px]:hidden">
+      <div className="rounded-full p-[1.3px] profile-pic">
+        <section className="grid gap-5  bg-black justify-items-center rounded-full p-2.5">
           <div>
             <Link
-              className="bg-[#12F7D6] p-1.5 grid items-center justify-center rounded-full"
+              className="custom-transition bg-[#12F7D6] p-1.5 grid items-center justify-center rounded-full"
               href={"#"}
             >
               <span>
@@ -19,7 +19,7 @@ export default function FixedBar() {
           </div>
           <div>
             <Link
-              className="text-white p-1.5 grid items-center justify-center rounded-full"
+              className="custom-transition hover:text-[#12F7D6] text-white p-1.5 grid items-center justify-center rounded-full"
               href={"#"}
             >
               <span>
@@ -29,7 +29,7 @@ export default function FixedBar() {
           </div>
           <div>
             <Link
-              className="text-white p-1.5 grid items-center justify-center rounded-full"
+              className="custom-transition hover:text-[#12F7D6] text-white p-1.5 grid items-center justify-center rounded-full"
               href={"#"}
             >
               <span>
@@ -39,7 +39,7 @@ export default function FixedBar() {
           </div>
           <div>
             <Link
-              className="text-white p-1.5 grid items-center justify-center rounded-full"
+              className="custom-transition hover:text-[#12F7D6] text-white p-1.5 grid items-center justify-center rounded-full"
               href={"#"}
             >
               <span>
@@ -50,7 +50,7 @@ export default function FixedBar() {
 
           <div>
             <Link
-              className="text-white p-1.5 grid items-center justify-center rounded-full"
+              className="custom-transition hover:text-[#12F7D6] text-white p-1.5 grid items-center justify-center rounded-full"
               href={"#"}
             >
               <span>

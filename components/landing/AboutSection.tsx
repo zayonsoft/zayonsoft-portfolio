@@ -3,7 +3,10 @@ import { ubuntu, ibmPlexMono } from "./Main";
 
 export default function AboutSection() {
   return (
-    <section className="bg-[#1A1E23] relative px-20 max-[901px]:px-10 max-[701px]:px-5 py-20 max-[701px]:py-10">
+    <section
+      id="about"
+      className="bg-[#1A1E23] relative px-20 max-[901px]:px-10 max-[701px]:px-5 py-20 max-[701px]:py-10"
+    >
       <div className="absolute about-bg top-0 bottom-0 left-0 right-0 opacity-10"></div>
       <div className="grid relative">
         <section className={`max-[701px]:hidden`}>

@@ -18,7 +18,10 @@ export const ubuntu = Ubuntu({
 
 export default function Main() {
   return (
-    <section className="pt-27 pb-10 px-20 grid gap-16 max-[901px]:px-10 max-[701px]:px-5">
+    <section
+      id="home"
+      className="pt-27 pb-10 px-20 grid gap-16 max-[901px]:px-10 max-[701px]:px-5"
+    >
       <div className="grid gap-1 grid-cols-[0.65fr_1fr] max-[701px]:grid-cols-1 max-[701px]:gap-8">
         <div className="pr-10 max-[701px]:pr-0">
           <div className="grid rounded-full p-[5px] profile-pic max-w-[290px] justify-self-end max-[701px]:justify-self-center">

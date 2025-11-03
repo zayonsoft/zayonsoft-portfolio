@@ -11,11 +11,18 @@ import Link from "next/link";
 import NavLink from "./NavLink";
 import { FiCode, FiHome, FiMonitor, FiUser } from "react-icons/fi";
 import { BiCopyright } from "react-icons/bi";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 const ibmPlexMono = IBM_Plex_Mono({
   weight: ["100", "200", "300", "400", "500", "600", "700"],
   subsets: ["latin"],
 });
+
+const urls = {
+  home: "/#home",
+  about: "/#about",
+  skills: "/#skills",
+  my_work: "/#my_work",
+};
 
 export default function Nav() {
   const [sideOpened, setSideOpened] = useState<boolean>(false);
@@ -27,6 +34,11 @@ export default function Nav() {
   function openAside() {
     setSideOpened(true);
   }
+
+  useEffect(() => {
+    if (sideOpened) document.body.classList.add("fix-body");
+    else document.body.classList.remove("fix-body");
+  }, [sideOpened]);
 
   function closeAsideWhenClicked(e: React.MouseEvent<HTMLDivElement>) {
     if (e.target == e.currentTarget) {
@@ -127,7 +139,7 @@ export default function Nav() {
                 <li>
                   <NavLink
                     icon={<FiHome />}
-                    url="#"
+                    url={urls.home}
                     name="Home"
                     active={true}
                   />
@@ -135,7 +147,7 @@ export default function Nav() {
                 <li>
                   <NavLink
                     icon={<FiUser />}
-                    url="#"
+                    url={urls.about}
                     name="About"
                     active={false}
                   />
@@ -143,7 +155,7 @@ export default function Nav() {
                 <li>
                   <NavLink
                     icon={<FiCode />}
-                    url="#"
+                    url={urls.skills}
                     name="Skills"
                     active={false}
                   />
@@ -151,7 +163,7 @@ export default function Nav() {
                 <li>
                   <NavLink
                     icon={<FiMonitor />}
-                    url="#"
+                    url={urls.my_work}
                     name="My Work"
                     active={false}
                   />
