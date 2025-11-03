@@ -38,10 +38,6 @@ export default function StructureFlow({ flow }: FlowProps) {
     setCurrentFlow(0);
   }
 
-  useEffect(() => {
-    // console.log(flowData);
-  }, [flowData]);
-
   function addOpacity(index: number) {
     if (!(index > flow.length - 1)) {
       setFlowData((prevData) => ({ ...prevData, [index]: true }));
@@ -57,7 +53,7 @@ export default function StructureFlow({ flow }: FlowProps) {
   useEffect(() => {
     let timerID = setInterval(() => {
       incrementFlow();
-    }, 4000);
+    }, 1500);
     return () => {
       clearInterval(timerID);
     };
@@ -82,7 +78,13 @@ export default function StructureFlow({ flow }: FlowProps) {
         </div>
         <section className="grid gap-14">
           {flow.map((step, index, array) => (
-            <Flow key={v4()} index={index} step={step} array={array} />
+            <Flow
+              key={index}
+              index={index}
+              step={step}
+              array={array}
+              flowData={flowData}
+            />
           ))}
         </section>
       </div>

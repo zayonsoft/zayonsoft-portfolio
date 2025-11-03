@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .custom-transition {
-  transition: 0.8s ease;
+  transition: 0.8s ease-in-out;
 }
 
 .profile-pic {
