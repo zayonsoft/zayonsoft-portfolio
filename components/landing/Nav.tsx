@@ -54,7 +54,7 @@ export default function Nav() {
       className="fixed left-0 right-0 px-20 max-[901px]:px-10 max-[701px]:px-5 bg-[#292F36]"
     >
       <nav className="grid grid-cols-[auto_auto] gap-8 items-center max-[701px]:grid-cols-[auto_1fr] py-5 max-[701px]:py-3  max-[701px]:border-b-2 max-[701px]:border-b-[#43454D]">
-        <div>
+        <div className="grid justify-self-start">
           <Link href={"/"}>
             <Image
               className="h-auto outline-none w-33 min-w-25 max-[901px]:w-28"
@@ -68,10 +68,10 @@ export default function Nav() {
 
         {/* SEARCH AND LINKS */}
         <div
-          className={`grid w-full max-w-2xl justify-self-end grid-cols-2 max-[821px]:grid-cols-[1fr_auto] max-[701px]:grid-cols-[1fr_auto] ${ibmPlexMono.className} gap-10  max-[820px]:gap-7 items-center`}
+          className={`grid w-full max-w-2xl justify-self-end grid-cols-2 max-[821px]:grid-cols-[1fr_auto] ${ibmPlexMono.className} gap-10  max-[820px]:gap-7 items-center`}
         >
           <div className="m-auto w-full grid justify-center">
-            <search className="border-[#12F7D6] w-full px-3 py-[5px] rounded-full border-[1.5px] min-[701px]:min-w-60 max-w-73 max-[701px]:max-w-60 max-[500px]:hidden">
+            <search className="border-[#12F7D6] w-full px-3 py-[5px] rounded-full border-[1.5px] min-[850px]:min-w-60 max-w-73 max-[701px]:max-w-60 max-[500px]:hidden">
               <label
                 className="flex gap-1.5 items-center text-sm"
                 htmlFor="search"
