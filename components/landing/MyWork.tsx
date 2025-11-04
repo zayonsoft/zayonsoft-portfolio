@@ -7,7 +7,7 @@ export default function MyWork() {
   return (
     <section
       id="my_work"
-      className="bg-[#1A1E23] relative py-20 max-[701px]:py-10"
+      className="scroll-m-[69px] max-[701px]:scroll-m-[62px] bg-[#1A1E23] relative py-20 max-[701px]:py-10"
     >
       <div className="work-bg absolute top-0 bottom-0 left-0 right-0 opacity-30"></div>
       <div className="relative grid gap-20">

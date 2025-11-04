@@ -2,6 +2,14 @@ import Link from "next/link";
 import { CgMail } from "react-icons/cg";
 import { FiCode, FiHome, FiMonitor, FiUser } from "react-icons/fi";
 
+export const urls = {
+  home: "/#home",
+  about: "/#about",
+  skills: "/#skills",
+  my_work: "/#my_work",
+  contact: "/#contact",
+};
+
 export default function FixedBar() {
   return (
     <section className="left-3 fixed z-50 -translate-y-1/2 top-1/2 max-[701px]:hidden">
@@ -10,7 +18,7 @@ export default function FixedBar() {
           <div>
             <Link
               className="custom-transition bg-[#12F7D6] p-1.5 grid items-center justify-center rounded-full"
-              href={"#"}
+              href={`${urls.home}`}
             >
               <span>
                 <FiHome />
@@ -20,7 +28,7 @@ export default function FixedBar() {
           <div>
             <Link
               className="custom-transition hover:text-[#12F7D6] text-white p-1.5 grid items-center justify-center rounded-full"
-              href={"#"}
+              href={`${urls.about}`}
             >
               <span>
                 <FiUser />
@@ -30,7 +38,7 @@ export default function FixedBar() {
           <div>
             <Link
               className="custom-transition hover:text-[#12F7D6] text-white p-1.5 grid items-center justify-center rounded-full"
-              href={"#"}
+              href={`${urls.skills}`}
             >
               <span>
                 <FiCode />
@@ -40,7 +48,7 @@ export default function FixedBar() {
           <div>
             <Link
               className="custom-transition hover:text-[#12F7D6] text-white p-1.5 grid items-center justify-center rounded-full"
-              href={"#"}
+              href={`${urls.my_work}`}
             >
               <span>
                 <FiMonitor />
@@ -51,7 +59,7 @@ export default function FixedBar() {
           <div>
             <Link
               className="custom-transition hover:text-[#12F7D6] text-white p-1.5 grid items-center justify-center rounded-full"
-              href={"#"}
+              href={urls.contact}
             >
               <span>
                 <CgMail size={21} />

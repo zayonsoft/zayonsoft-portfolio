@@ -9,7 +9,7 @@ import { FaSearch } from "react-icons/fa";
 import { HiX } from "react-icons/hi";
 import Link from "next/link";
 import NavLink from "./NavLink";
-import { FiCode, FiHome, FiMonitor, FiUser } from "react-icons/fi";
+import { FiCode, FiHome, FiMail, FiMonitor, FiUser } from "react-icons/fi";
 import { BiCopyright } from "react-icons/bi";
 import { useState, useEffect } from "react";
 const ibmPlexMono = IBM_Plex_Mono({
@@ -17,11 +17,12 @@ const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
 });
 
-const urls = {
+export const urls = {
   home: "/#home",
   about: "/#about",
   skills: "/#skills",
   my_work: "/#my_work",
+  contact: "/#contact",
 };
 
 export default function Nav() {
@@ -48,7 +49,10 @@ export default function Nav() {
 
   return (
     // header deals with horizontal padding and nav deals with vertical
-    <header className="fixed left-0 right-0 px-20 max-[901px]:px-10 max-[701px]:px-5 bg-[#292F36]">
+    <header
+      id="header"
+      className="fixed left-0 right-0 px-20 max-[901px]:px-10 max-[701px]:px-5 bg-[#292F36]"
+    >
       <nav className="grid grid-cols-[auto_auto] gap-8 items-center max-[701px]:grid-cols-[auto_1fr] py-5 max-[701px]:py-3  max-[701px]:border-b-2 max-[701px]:border-b-[#43454D]">
         <div>
           <Link href={"/"}>
@@ -165,6 +169,14 @@ export default function Nav() {
                     icon={<FiMonitor />}
                     url={urls.my_work}
                     name="My Work"
+                    active={false}
+                  />
+                </li>
+                <li>
+                  <NavLink
+                    icon={<FiMail />}
+                    url={urls.contact}
+                    name="Contact"
                     active={false}
                   />
                 </li>

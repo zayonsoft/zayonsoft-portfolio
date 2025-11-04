@@ -5,7 +5,7 @@ import FancyUnderline from "../general/FancyUnderline";
 
 export default function Skills() {
   return (
-    <div id="skills" className="">
+    <div id="skills" className="scroll-m-[69px] max-[701px]:scroll-m-[62px] ">
       <section className="bg-[#292F36] relative py-20 max-[701px]:py-10">
         <div className="skills-bg absolute top-0 bottom-0 left-0 right-0 opacity-10"></div>
         <div className="relative grid gap-50">

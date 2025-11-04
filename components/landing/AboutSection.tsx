@@ -5,7 +5,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="bg-[#1A1E23] relative px-20 max-[901px]:px-10 max-[701px]:px-5 py-20 max-[701px]:py-10"
+      className="scroll-m-[69px] max-[701px]:scroll-m-[62px] bg-[#1A1E23] relative px-20 max-[901px]:px-10 max-[701px]:px-5 py-20 max-[701px]:py-10"
     >
       <div className="absolute about-bg top-0 bottom-0 left-0 right-0 opacity-10"></div>
       <div className="grid relative">

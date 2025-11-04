@@ -5,7 +5,10 @@ import { IoPaperPlaneOutline } from "react-icons/io5";
 import ContactTextarea from "./ContactTextarea";
 export default function Contact() {
   return (
-    <section className="bg-[#1A1E23] relative px-20 max-[901px]:px-10 max-[701px]:px-5 py-20 max-[701px]:py-10">
+    <section
+      id="contact"
+      className="scroll-m-[69px] max-[701px]:scroll-m-[62px] bg-[#1A1E23] relative px-20 max-[901px]:px-10 max-[701px]:px-5 py-20 max-[701px]:py-10"
+    >
       <div className="grid gap-25">
         <div className="grid gap-10">
           <Image
