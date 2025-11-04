@@ -22,8 +22,8 @@ export default function Main() {
       id="home"
       className="pt-27 pb-10 px-20 grid gap-16 max-[901px]:px-10 max-[701px]:px-5"
     >
-      <div className="grid gap-1 grid-cols-[0.65fr_1fr] max-[701px]:grid-cols-1 max-[701px]:gap-8">
-        <div className="pr-10 max-[701px]:pr-0">
+      <div className="grid gap-1 grid-cols-[0.65fr_1fr] max-[780px]:grid-cols-[0.7fr_1fr] max-[701px]:grid-cols-1 max-[701px]:gap-8">
+        <div className="pr-10 max-[840px]:pr-0">
           <div className="grid rounded-full p-[5px] profile-pic max-w-[290px] justify-self-end max-[701px]:justify-self-center">
             <div className="relative z-10">
               <Image
@@ -34,7 +34,7 @@ export default function Main() {
                 alt="Zayonsoft's Picture"
               />
               {/* DIv for overlay for the picture */}
-              <div className="grid content-end absolute pic-gradient font-normal text-center p-10 top-0 left-0 bottom-0 right-0 rounded-full">
+              <div className="bg-red-500 grid content-end absolute pic-gradient font-normal text-center py-10 top-0 left-0 bottom-0 right-0 rounded-full">
                 {/* Picture Texts goes below */}
                 <div className="grid gap-5 justify-self-center">
                   <div className={`${ubuntu.className} grid gap-1.5`}>
@@ -108,7 +108,9 @@ export default function Main() {
         </div>
         <div className="grid content-center text-white">
           {/* Section for the text */}
-          <section className={`grid gap-8 ${ubuntu.className}`}>
+          <section
+            className={`max-[840px]:pl-10 grid gap-8 ${ubuntu.className}`}
+          >
             <div className="grid gap-2">
               <p className={`${ibmPlexMono.className} text-xs text-[#98FAEC]`}>
                 {"<h1>"}
