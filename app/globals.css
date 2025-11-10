@@ -10,6 +10,19 @@
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 2px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #12f7d6;
+  border-radius: 5px;
+}
+
 .custom-transition {
   transition: 0.8s ease-in-out;
 }
@@ -43,11 +56,10 @@
 
 .project-text {
   background: linear-gradient(
-      270deg,
-      rgba(18, 247, 214, 0.15) 0%,
-      rgba(18, 247, 214, 0.15) 100%
-    )
-    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    270deg,
+    rgba(18, 247, 214, 0.15) 0%,
+    rgba(18, 247, 214, 0.15) 100%
+  );
 
   background-size: cover;
 }
@@ -59,12 +71,11 @@
 
 .ptext-overlay {
   background: radial-gradient(
-      90.16% 143.01% at 15.32% 21.04%,
-      rgba(18, 247, 214, 0.2) 0%,
-      rgba(18, 247, 214, 0.0447917) 77.08%,
-      rgba(18, 247, 214, 0) 100%
-    )
-    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    90.16% 143.01% at 15.32% 21.04%,
+    rgba(18, 247, 214, 0.2) 0%,
+    rgba(18, 247, 214, 0.0447917) 77.08%,
+    rgba(18, 247, 214, 0) 100%
+  );
   backdrop-filter: blur(80px);
 }
 
@@ -85,7 +96,7 @@
   background: transparent;
 }
 .text-area-scroll::-webkit-scrollbar-thumb {
-  height: 2px;
+  background: transparent;
 }
 
 .text-bg-design {

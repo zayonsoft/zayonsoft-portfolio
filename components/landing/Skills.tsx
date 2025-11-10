@@ -32,15 +32,17 @@ export default function Skills() {
                 src={"/skills_image.svg"}
                 height={1000}
                 width={1000}
-                className="w-full h-auto max-w-[850px] m-auto max-[701px]:hidden"
+                className="w-full h-auto max-w-[850px] m-auto max-[701px]:hidden select-none"
                 alt="Skills Image"
+                draggable={false}
               />
               <Image
                 src={"/skills_image_mobile.svg"}
                 height={1000}
                 width={1000}
-                className="hidden w-full h-auto m-auto max-[701px]:block"
+                className="hidden w-full h-auto m-auto max-[701px]:block select-none"
                 alt="Skills Image"
+                draggable={false}
               />
             </div>
           </section>

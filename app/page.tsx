@@ -5,11 +5,13 @@ import Footer from "@/components/landing/Footer";
 import Main from "@/components/landing/Main";
 import MyWork from "@/components/landing/MyWork";
 import Nav from "@/components/landing/Nav";
+import ScrollController from "@/components/landing/ScrollController";
 import Skills from "@/components/landing/Skills";
 
 export default function Home() {
   return (
     <section>
+      <ScrollController />
       <FixedBar />
       <div className="relative z-[100000]">
         <Nav />
