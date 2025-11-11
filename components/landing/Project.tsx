@@ -10,7 +10,7 @@ type TestProps = {
 export default function Project({ count }: TestProps) {
   return (
     <section>
-      <div className="grid grid-cols-2 gap-5 py-30 max-[701px]:grid-cols-1">
+      <div className="grid grid-cols-2 gap-5 py-30 max-[701px]:grid-cols-1 max-[701px]:py-15">
         {/* Desc */}
         <section
           className={`${

@@ -2,12 +2,12 @@ import Link from "next/link";
 import { CgMail } from "react-icons/cg";
 import { FiCode, FiHome, FiMonitor, FiUser } from "react-icons/fi";
 
-export const urls = {
-  home: "/#home",
-  about: "/#about",
-  skills: "/#skills",
-  my_work: "/#my_work",
-  contact: "/#contact",
+const urls = {
+  home: { url: "/#home", id: "home-icon" },
+  about: { url: "/#about", id: "about-icon" },
+  skills: { url: "/#skills", id: "skills-icon" },
+  my_work: { url: "/#my_work", id: "my_work-icon" },
+  contact: { url: "/#contact", id: "contact-icon" },
 };
 
 export default function FixedBar() {
@@ -18,7 +18,8 @@ export default function FixedBar() {
           <div>
             <Link
               className="custom-transition bg-[#12F7D6] p-1.5 grid items-center justify-center rounded-full"
-              href={`${urls.home}`}
+              id={urls.home.id}
+              href={`${urls.home.url}`}
             >
               <span>
                 <FiHome />
@@ -27,8 +28,9 @@ export default function FixedBar() {
           </div>
           <div>
             <Link
-              className="custom-transition hover:text-[#12F7D6] text-white p-1.5 grid items-center justify-center rounded-full"
-              href={`${urls.about}`}
+              className="custom-transition hover:scale-[0.9] hover:text-[#12F7D6] text-white p-1.5 grid items-center justify-center rounded-full"
+              id={urls.about.id}
+              href={`${urls.about.url}`}
             >
               <span>
                 <FiUser />
@@ -37,8 +39,9 @@ export default function FixedBar() {
           </div>
           <div>
             <Link
-              className="custom-transition hover:text-[#12F7D6] text-white p-1.5 grid items-center justify-center rounded-full"
-              href={`${urls.skills}`}
+              className="custom-transition hover:scale-[0.9] hover:text-[#12F7D6] text-white p-1.5 grid items-center justify-center rounded-full"
+              id={urls.skills.id}
+              href={urls.skills.url}
             >
               <span>
                 <FiCode />
@@ -47,8 +50,9 @@ export default function FixedBar() {
           </div>
           <div>
             <Link
-              className="custom-transition hover:text-[#12F7D6] text-white p-1.5 grid items-center justify-center rounded-full"
-              href={`${urls.my_work}`}
+              className="custom-transition hover:scale-[0.9] hover:text-[#12F7D6] text-white p-1.5 grid items-center justify-center rounded-full"
+              id={urls.my_work.id}
+              href={urls.my_work.url}
             >
               <span>
                 <FiMonitor />
@@ -58,8 +62,9 @@ export default function FixedBar() {
 
           <div>
             <Link
-              className="custom-transition hover:text-[#12F7D6] text-white p-1.5 grid items-center justify-center rounded-full"
-              href={urls.contact}
+              className="custom-transition hover:scale-[0.9] hover:text-[#12F7D6] text-white p-1.5 grid items-center justify-center rounded-full"
+              id={urls.contact.id}
+              href={urls.contact.url}
             >
               <span>
                 <CgMail size={21} />

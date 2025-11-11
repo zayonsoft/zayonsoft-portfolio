@@ -27,14 +27,14 @@ export default function Main() {
           <div className="grid rounded-full p-[5px] profile-pic max-w-[290px] justify-self-end max-[701px]:justify-self-center">
             <div className="relative z-10">
               <Image
-                className="w-auto min-w-20 h-[90vh] rounded-full object-center max-[701px]:min-w-auto"
+                className="w-auto min-w-20 h-[90vh] rounded-full select-none object-center max-[701px]:min-w-auto"
                 src={"/zayonsoft_pic.png"}
                 height={1500}
                 width={1000}
                 alt="Zayonsoft's Picture"
               />
               {/* DIv for overlay for the picture */}
-              <div className="bg-red-500 grid content-end absolute pic-gradient font-normal text-center py-10 top-0 left-0 bottom-0 right-0 rounded-full">
+              <div className="grid content-end absolute pic-gradient font-normal text-center py-10 top-0 left-0 bottom-0 right-0 rounded-full">
                 {/* Picture Texts goes below */}
                 <div className="grid gap-5 justify-self-center">
                   <div className={`${ubuntu.className} grid gap-1.5`}>
@@ -109,7 +109,7 @@ export default function Main() {
         <div className="grid content-center text-white">
           {/* Section for the text */}
           <section
-            className={`max-[840px]:pl-10 grid gap-8 ${ubuntu.className}`}
+            className={`max-[840px]:pl-10 grid gap-8 ${ubuntu.className} max-[701px]:pl-0`}
           >
             <div className="grid gap-2">
               <p className={`${ibmPlexMono.className} text-xs text-[#98FAEC]`}>
@@ -143,9 +143,7 @@ export default function Main() {
               <p className={`${ibmPlexMono.className} text-xs text-[#98FAEC]`}>
                 {"</p>"}
               </p>
-            </div>
-            <div>
-              <p className="flex gap-2 items-center capitalize text-3xl text-[#12F7D6]">
+              <p className="flex gap-2 items-center capitalize text-3xl text-[#12F7D6] ml-5 pt-2">
                 <span className={`${ibmPlexMono.className}`}>let's talk</span>
                 <span className="text-lg bg-[#43454D] p-1.5 rounded-full">
                   <Link href={"#"}>
@@ -154,6 +152,7 @@ export default function Main() {
                 </span>
               </p>
             </div>
+            <div></div>
           </section>
         </div>
       </div>

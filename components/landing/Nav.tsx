@@ -17,12 +17,12 @@ const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
 });
 
-export const urls = {
-  home: "/#home",
-  about: "/#about",
-  skills: "/#skills",
-  my_work: "/#my_work",
-  contact: "/#contact",
+const urls = {
+  home: { url: "/#home", id: "home-mobile-icon" },
+  about: { url: "/#about", id: "about-mobile-icon" },
+  skills: { url: "/#skills", id: "skills-mobile-icon" },
+  my_work: { url: "/#my_work", id: "my_work-mobile-icon" },
+  contact: { url: "/#contact", id: "contact-mobile-icon" },
 };
 
 export default function Nav() {
@@ -55,7 +55,7 @@ export default function Nav() {
     >
       <nav className="grid grid-cols-[auto_auto] gap-8 items-center max-[701px]:grid-cols-[auto_1fr] py-5 max-[701px]:py-3  max-[701px]:border-b-2 max-[701px]:border-b-[#43454D]">
         <div className="grid justify-self-start">
-          <Link href={"/"}>
+          <Link className="outline-none" href={"/"}>
             <Image
               className="h-auto outline-none w-33 min-w-25 max-[901px]:w-28"
               src={"/page_logo.svg"}
@@ -143,7 +143,8 @@ export default function Nav() {
                 <li>
                   <NavLink
                     icon={<FiHome />}
-                    url={urls.home}
+                    url={urls.home.url}
+                    id={urls.home.id}
                     name="Home"
                     active={true}
                   />
@@ -151,7 +152,8 @@ export default function Nav() {
                 <li>
                   <NavLink
                     icon={<FiUser />}
-                    url={urls.about}
+                    id={urls.about.id}
+                    url={urls.about.url}
                     name="About"
                     active={false}
                   />
@@ -159,7 +161,8 @@ export default function Nav() {
                 <li>
                   <NavLink
                     icon={<FiCode />}
-                    url={urls.skills}
+                    id={urls.skills.id}
+                    url={urls.skills.url}
                     name="Skills"
                     active={false}
                   />
@@ -167,7 +170,8 @@ export default function Nav() {
                 <li>
                   <NavLink
                     icon={<FiMonitor />}
-                    url={urls.my_work}
+                    id={urls.my_work.id}
+                    url={urls.my_work.url}
                     name="My Work"
                     active={false}
                   />
@@ -175,7 +179,8 @@ export default function Nav() {
                 <li>
                   <NavLink
                     icon={<FiMail />}
-                    url={urls.contact}
+                    id={urls.contact.id}
+                    url={urls.contact.url}
                     name="Contact"
                     active={false}
                   />
