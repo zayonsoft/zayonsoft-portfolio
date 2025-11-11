@@ -9,16 +9,16 @@ export const urls: Record<string, string> = {
   contact: "/#contact",
 };
 
-type MapProps = { short: string; long: string };
+type MapProps = { desktop: string; mobile: string };
 
 // The ids for each sections link
-// short - Desktop, long-mobile in the sidebar
+// desktop - Desktop, mobile-mobile in the sidebar
 const sectionIconMapping: Record<string, MapProps> = {
-  home: { short: "home-icon", long: "home-mobile-icon" },
-  about: { short: "about-icon", long: "about-mobile-icon" },
-  skills: { short: "skills-icon", long: "skills-mobile-icon" },
-  my_work: { short: "my_work-icon", long: "my_work-mobile-icon" },
-  contact: { short: "contact-icon", long: "contact-mobile-icon" },
+  home: { desktop: "home-icon", mobile: "home-mobile-icon" },
+  about: { desktop: "about-icon", mobile: "about-mobile-icon" },
+  skills: { desktop: "skills-icon", mobile: "skills-mobile-icon" },
+  my_work: { desktop: "my_work-icon", mobile: "my_work-mobile-icon" },
+  contact: { desktop: "contact-icon", mobile: "contact-mobile-icon" },
 };
 
 type ControlProps = {
@@ -31,9 +31,31 @@ export default function ScrollController({}) {
   const [currentSectionId, setCurrentSectionId] = useState<string>("home");
 
   useEffect(() => {
-    const section = sectionIconMapping[currentSectionId];
-    console.log(section);
+    const currentSectionData = sectionIconMapping[currentSectionId];
+    removeAllActive();
+    addActive(currentSectionData.desktop);
+    addActive(currentSectionData.mobile);
   }, [currentSectionId]);
+
+  function removeAllActive() {
+    for (var i in sectionIconMapping) {
+      const eachSectionObject = sectionIconMapping[i];
+      const mobileId = eachSectionObject.mobile;
+      const desktopId = eachSectionObject.desktop;
+      removeActive(mobileId);
+      removeActive(desktopId);
+    }
+  }
+
+  function removeActive(id: string) {
+    const element = document.getElementById(id);
+    element?.classList.remove("active");
+  }
+
+  function addActive(id: string) {
+    const element = document.getElementById(id);
+    element?.classList.add("active");
+  }
 
   useEffect(() => {
     function elementControl(elementId: string): ControlProps {
@@ -63,7 +85,7 @@ export default function ScrollController({}) {
     */
     function scrollDetector() {
       let largestNegative = elementControl("home").top;
-      let smallestPositive = 100000000000 * 1000000000000 * 10000000000;
+      let smallestPositive = 100000000000 * 1000000000000 * 10000000000; // I added an hypothetically high value
       // Declaring the objects variable they'll be used to decide which of the closest two has more screen portion
       let smallestPositiveData: ControlProps = elementControl("home");
       let largestNegativeData: ControlProps = elementControl("home");

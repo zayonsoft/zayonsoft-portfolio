@@ -20,6 +20,7 @@ export default function FixedBar() {
               className="custom-transition bg-[#12F7D6] p-1.5 grid items-center justify-center rounded-full"
               id={urls.home.id}
               href={`${urls.home.url}`}
+              title="Home"
             >
               <span>
                 <FiHome />
@@ -31,6 +32,7 @@ export default function FixedBar() {
               className="custom-transition hover:scale-[0.9] hover:text-[#12F7D6] text-white p-1.5 grid items-center justify-center rounded-full"
               id={urls.about.id}
               href={`${urls.about.url}`}
+              title="About"
             >
               <span>
                 <FiUser />
@@ -42,6 +44,7 @@ export default function FixedBar() {
               className="custom-transition hover:scale-[0.9] hover:text-[#12F7D6] text-white p-1.5 grid items-center justify-center rounded-full"
               id={urls.skills.id}
               href={urls.skills.url}
+              title="Skills"
             >
               <span>
                 <FiCode />
@@ -53,6 +56,7 @@ export default function FixedBar() {
               className="custom-transition hover:scale-[0.9] hover:text-[#12F7D6] text-white p-1.5 grid items-center justify-center rounded-full"
               id={urls.my_work.id}
               href={urls.my_work.url}
+              title="My Work"
             >
               <span>
                 <FiMonitor />
@@ -65,6 +69,7 @@ export default function FixedBar() {
               className="custom-transition hover:scale-[0.9] hover:text-[#12F7D6] text-white p-1.5 grid items-center justify-center rounded-full"
               id={urls.contact.id}
               href={urls.contact.url}
+              title="Contact"
             >
               <span>
                 <CgMail size={21} />
