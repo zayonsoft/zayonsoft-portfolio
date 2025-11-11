@@ -116,7 +116,7 @@ export default function ScrollController({}) {
         setCurrentSectionId(smallestPositiveData.id);
       }
     }
-
+    scrollDetector(); //called so that when the page loads it sets the active link
     document.addEventListener("scroll", () => {
       scrollDetector();
     });
