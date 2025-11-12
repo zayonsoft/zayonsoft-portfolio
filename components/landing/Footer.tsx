@@ -24,6 +24,8 @@ export default function Footer() {
           <Link
             className="custom-transition block text-[#292F36] p-1.5 text-sm rounded-full bg-[#98FAEC] hover:bg-[#12F7D6]"
             href={socialLinkUrls.twitter}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <BsTwitterX />
           </Link>
@@ -32,6 +34,8 @@ export default function Footer() {
           <Link
             className="custom-transition block text-[#292F36] p-1.5 text-sm rounded-full bg-[#98FAEC] hover:bg-[#12F7D6]"
             href={socialLinkUrls.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FaFacebookF />
           </Link>
@@ -40,6 +44,8 @@ export default function Footer() {
           <Link
             className="custom-transition block text-[#292F36] p-1.5 text-sm rounded-full bg-[#98FAEC] hover:bg-[#12F7D6]"
             href={socialLinkUrls.github}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <BsGithub />
           </Link>

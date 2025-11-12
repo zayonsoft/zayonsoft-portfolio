@@ -15,26 +15,7 @@ import ChallengesSolution from "./ChallengesSolutions";
 import DemoLink from "./DemoLinks";
 import Contact from "@/components/landing/Contact";
 import Footer from "@/components/landing/Footer";
-
-type DataProps = {
-  id: string;
-  name: string;
-  preview_image: string;
-  hero_images: string[];
-  year: string;
-  type: string;
-  overview: string;
-  problem: string;
-  project_images: [string[], string[], string[]];
-  tech_stack_image: string[];
-  features: string[];
-  flow: string[];
-  design_principles: string[];
-  challenges_solutions: { challenge: string; solution: string }[];
-  live_demo_link: string;
-  source_code_link: string;
-  role: { title: string; desc: string };
-};
+import { DataProps } from "@/components/landing/Projects";
 
 export default async function Content() {
   const id = "b5f1247c-1148-42f2-855d-34e74e1e08ba"; //will be dynamically gotten
@@ -43,7 +24,6 @@ export default async function Content() {
     const file = await fs.readFile(filePath, "utf-8");
     const dataset = JSON.parse(file) as DataProps[];
     const data = dataset.find((project) => project.id == id);
-    console.log(data);
 
     if (data) {
       return (

@@ -10,6 +10,8 @@ export default function SocialLink({ name, icon, url }: LinkProps) {
     <Link
       className="flex items-center gap-1.5 text-[14px] outline-none"
       href={url}
+      target="_blank"
+      rel="noopener noreferrer"
     >
       <span className="text-[#12F7D6]">{icon}</span>
       <span className="text-white font-light tracking-wide">{name}</span>

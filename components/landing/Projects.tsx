@@ -1,10 +1,53 @@
 import Project from "./Project";
+import fs from "fs/promises";
+import path from "path";
+import { BsEmojiFrown } from "react-icons/bs";
 
-export default function Projects() {
-  return (
-    <section className="">
-      <Project count={1} />
-      <Project count={2} />
-    </section>
-  );
+export type DataProps = {
+  id: string;
+  name: string;
+  preview_image: string;
+  hero_images: string[];
+  year: string;
+  type: string;
+  overview: string;
+  problem: string;
+  project_images: [string[], string[], string[]];
+  tech_stack_image: string[];
+  features: string[];
+  flow: string[];
+  design_principles: string[];
+  challenges_solutions: { challenge: string; solution: string }[];
+  live_demo_link: string;
+  source_code_link: string;
+  role: { title: string; desc: string };
+};
+
+export default async function Projects() {
+  try {
+    const filePath = path.join(process.cwd(), "public", "data", "data.json");
+    const file = await fs.readFile(filePath, "utf-8");
+    const dataset = JSON.parse(file) as DataProps[];
+    console.log(dataset);
+
+    if (dataset) {
+      return (
+        <section className="text-white">
+          <Project count={1} />
+          <Project count={2} />
+        </section>
+      );
+    } else {
+      throw new Error("Couldn't Load Data");
+    }
+  } catch {
+    return (
+      <h1 className="grid gap-1 justify-items-center py-20 text-[#12F7D6] text-xl max-[701px]:text-lg">
+        <span className="text-2xl">
+          <BsEmojiFrown />
+        </span>
+        <span>Couldn't Load Projects!</span>
+      </h1>
+    );
+  }
 }

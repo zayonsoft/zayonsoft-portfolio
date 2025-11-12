@@ -25,7 +25,7 @@ export default function Home() {
       <div>
         <Skills />
       </div>
-      <div>
+      <div className="relative">
         <MyWork />
       </div>
       <div>

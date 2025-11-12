@@ -213,18 +213,24 @@ export default function Nav() {
                     <Link
                       className="custom-transition hover:bg-black p-2 rounded-full"
                       href={socialLinkUrls.twitter}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <BsTwitterX />
                     </Link>
                     <Link
                       className="custom-transition hover:bg-black p-2 rounded-full"
                       href={socialLinkUrls.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <FaFacebookF />
                     </Link>
                     <Link
                       className="custom-transition hover:bg-black p-2 rounded-full"
                       href={socialLinkUrls.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <BsGithub />
                     </Link>
