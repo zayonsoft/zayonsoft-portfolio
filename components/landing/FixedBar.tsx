@@ -17,7 +17,7 @@ export default function FixedBar() {
         <section className="grid gap-5  bg-black justify-items-center rounded-full p-2.5">
           <div>
             <Link
-              className="custom-transition bg-[#12F7D6] p-1.5 grid items-center justify-center rounded-full"
+              className="custom-transition hover:scale-[0.9] hover:text-[#12F7D6] text-white p-1.5 grid items-center justify-center rounded-full"
               id={urls.home.id}
               href={`${urls.home.url}`}
               title="Home"

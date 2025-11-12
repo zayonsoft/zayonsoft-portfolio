@@ -25,6 +25,12 @@ const urls = {
   contact: { url: "/#contact", id: "contact-mobile-icon" },
 };
 
+const socialLinkUrls = {
+  github: process.env.NEXT_PUBLIC_GITHUB_URL || "",
+  twitter: process.env.NEXT_PUBLIC_X_URL || "",
+  facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL || "",
+};
+
 export default function Nav() {
   const [sideOpened, setSideOpened] = useState<boolean>(false);
 
@@ -113,9 +119,21 @@ export default function Nav() {
             {/* MOBILE VIEW ICONS END */}
 
             <ul className="flex gap-6 justify-between max-[701px]:hidden">
-              <SocialLink icon={<BsTwitterX />} name="Twitter" url="#" />
-              <SocialLink icon={<FaFacebookF />} name="Facebook" url="#" />
-              <SocialLink icon={<BsGithub />} name="GitHub" url="#" />
+              <SocialLink
+                icon={<BsTwitterX />}
+                name="Twitter"
+                url={socialLinkUrls.twitter}
+              />
+              <SocialLink
+                icon={<FaFacebookF />}
+                name="Facebook"
+                url={socialLinkUrls.facebook}
+              />
+              <SocialLink
+                icon={<BsGithub />}
+                name="GitHub"
+                url={socialLinkUrls.github}
+              />
             </ul>
           </div>
 

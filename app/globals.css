@@ -28,6 +28,11 @@
   transition: 0.8s ease-in-out;
 }
 
+.active {
+  background: #12f7d6;
+  color: black;
+}
+
 .profile-pic {
   background: linear-gradient(#12f7d6, #ffffff);
 }
