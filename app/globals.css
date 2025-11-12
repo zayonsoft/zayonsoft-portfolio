@@ -33,6 +33,13 @@
   color: black;
 }
 
+@media screen and (max-width: 701px) {
+  .active {
+    color: #12f7d6;
+    background: black;
+  }
+}
+
 .profile-pic {
   background: linear-gradient(#12f7d6, #ffffff);
 }

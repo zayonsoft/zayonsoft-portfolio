@@ -164,7 +164,6 @@ export default function Nav() {
                     url={urls.home.url}
                     id={urls.home.id}
                     name="Home"
-                    active={true}
                   />
                 </li>
                 <li>
@@ -173,7 +172,6 @@ export default function Nav() {
                     id={urls.about.id}
                     url={urls.about.url}
                     name="About"
-                    active={false}
                   />
                 </li>
                 <li>
@@ -182,7 +180,6 @@ export default function Nav() {
                     id={urls.skills.id}
                     url={urls.skills.url}
                     name="Skills"
-                    active={false}
                   />
                 </li>
                 <li>
@@ -191,7 +188,6 @@ export default function Nav() {
                     id={urls.my_work.id}
                     url={urls.my_work.url}
                     name="My Work"
-                    active={false}
                   />
                 </li>
                 <li>
@@ -200,7 +196,6 @@ export default function Nav() {
                     id={urls.contact.id}
                     url={urls.contact.url}
                     name="Contact"
-                    active={false}
                   />
                 </li>
               </ul>
@@ -217,19 +212,19 @@ export default function Nav() {
                   <div className="flex gap-5 items-center">
                     <Link
                       className="custom-transition hover:bg-black p-2 rounded-full"
-                      href={"#"}
+                      href={socialLinkUrls.twitter}
                     >
                       <BsTwitterX />
                     </Link>
                     <Link
                       className="custom-transition hover:bg-black p-2 rounded-full"
-                      href={"#"}
+                      href={socialLinkUrls.facebook}
                     >
                       <FaFacebookF />
                     </Link>
                     <Link
                       className="custom-transition hover:bg-black p-2 rounded-full"
-                      href={"#"}
+                      href={socialLinkUrls.github}
                     >
                       <BsGithub />
                     </Link>

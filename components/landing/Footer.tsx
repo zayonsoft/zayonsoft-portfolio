@@ -3,6 +3,12 @@ import { BsTwitterX, BsGithub } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa6";
 import { ubuntu } from "./Main";
 
+const socialLinkUrls = {
+  github: process.env.NEXT_PUBLIC_GITHUB_URL || "",
+  twitter: process.env.NEXT_PUBLIC_X_URL || "",
+  facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL || "",
+};
+
 export default function Footer() {
   return (
     <section
@@ -17,7 +23,7 @@ export default function Footer() {
         <p>
           <Link
             className="custom-transition block text-[#292F36] p-1.5 text-sm rounded-full bg-[#98FAEC] hover:bg-[#12F7D6]"
-            href={"#"}
+            href={socialLinkUrls.twitter}
           >
             <BsTwitterX />
           </Link>
@@ -25,7 +31,7 @@ export default function Footer() {
         <p>
           <Link
             className="custom-transition block text-[#292F36] p-1.5 text-sm rounded-full bg-[#98FAEC] hover:bg-[#12F7D6]"
-            href={"#"}
+            href={socialLinkUrls.facebook}
           >
             <FaFacebookF />
           </Link>
@@ -33,7 +39,7 @@ export default function Footer() {
         <p>
           <Link
             className="custom-transition block text-[#292F36] p-1.5 text-sm rounded-full bg-[#98FAEC] hover:bg-[#12F7D6]"
-            href={"#"}
+            href={socialLinkUrls.github}
           >
             <BsGithub />
           </Link>
