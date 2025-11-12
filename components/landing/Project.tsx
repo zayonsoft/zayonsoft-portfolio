@@ -10,7 +10,7 @@ type TestProps = {
 export default function Project({ count }: TestProps) {
   return (
     <section>
-      <div className="grid grid-cols-2 gap-5 py-30 max-[701px]:grid-cols-1 max-[701px]:py-15">
+      <div className="grid grid-cols-2 gap-5 py-30 max-[701px]:grid-cols-1 max-[701px]:py-15 max-[701px]:gap-8">
         {/* Desc */}
         <section
           className={`${
@@ -18,7 +18,7 @@ export default function Project({ count }: TestProps) {
           } grid items-center max-[701px]:order-2`}
         >
           <div
-            className={`grid items-center max-h-fit min-h-[300px] gap-2 ${ibmPlexMono.className}`}
+            className={`grid items-center max-h-fit min-h-[300px] gap-2 ${ibmPlexMono.className} max-[701px]:min-h-auto max-[701px]:gap-5`}
           >
             <div
               className={`${
@@ -41,7 +41,7 @@ export default function Project({ count }: TestProps) {
             <div className="relative project-text rounded-xl">
               <div className="absolute top-0 right-0 bottom-0 left-0 rounded-xl ptext-overlay"></div>
               <div className="absolute top-0 right-0 bottom-0 left-0 ptext-cover rounded-xl opacity-[8%]"></div>
-              <p className="relative text-justify text-white text-sm p-4 text-cap capitalize">
+              <p className="relative text-white text-sm p-4 capitalize">
                 A web-based and highly interactive application that collects the
                 course information of students along with their Grades in those
                 courses and uses the info to calculate the Grade Point Average
@@ -50,7 +50,13 @@ export default function Project({ count }: TestProps) {
               </p>
             </div>
 
-            <div className={`${count % 2 == 0 ? "justify-self-end" : ""}`}>
+            <div
+              className={`${
+                count % 2 == 0
+                  ? "justify-self-end max-[701px]:justify-self-start"
+                  : ""
+              }`}
+            >
               <Link
                 className="flex gap-1 items-center p-2.5 bg-white w-fit text-[15px] font-medium rounded-full text-[#292F36]"
                 href={"#"}
@@ -65,7 +71,11 @@ export default function Project({ count }: TestProps) {
         </section>
         {/* Image Section below */}
         <section className="grid gap-10">
-          <div className="gap-0 hidden max-[701px]:grid">
+          <div
+            className={`${
+              count % 2 == 0 ? "justify-items-end" : ""
+            } gap-0 hidden max-[701px]:grid`}
+          >
             <p
               className={`flex text-sm items-center gap-2 text-[#12F7D6] font-medium`}
             >
