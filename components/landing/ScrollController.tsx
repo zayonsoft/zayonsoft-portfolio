@@ -57,6 +57,28 @@ export default function ScrollController({}) {
     element?.classList.add("active");
   }
 
+  function scrollWithoutHashingUrl() {
+    for (var i in sectionIconMapping) {
+      const eachSectionObject = sectionIconMapping[i];
+      const mobileId = eachSectionObject.mobile;
+      const desktopId = eachSectionObject.desktop;
+      scrollToSection(mobileId);
+      scrollToSection(desktopId);
+    }
+  }
+
+  function scrollToSection(id: string) {
+    let link = document.getElementById(id);
+    link?.addEventListener("click", (e) => {
+      e.preventDefault();
+      const href = link.getAttribute("href");
+      const sectionId = href?.slice(2) || "";
+      const section = document.getElementById(sectionId);
+      section?.scrollIntoView()
+    });
+    //get the attribute href to know where to scroll to
+  }
+
   useEffect(() => {
     function elementControl(elementId: string): ControlProps {
       const fixedHeader = document.getElementById("header");
@@ -117,6 +139,7 @@ export default function ScrollController({}) {
       }
     }
     scrollDetector(); //called so that when the page loads it sets the active link
+    scrollWithoutHashingUrl();
     document.addEventListener("scroll", () => {
       scrollDetector();
     });
