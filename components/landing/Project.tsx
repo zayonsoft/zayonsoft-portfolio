@@ -4,10 +4,24 @@ import Link from "next/link";
 import { HiOutlineExternalLink } from "react-icons/hi";
 
 type TestProps = {
+  id: string;
   count: number;
+  name: string;
+  preview_image: string;
+  year: string;
+  type: string;
+  overview: string;
 };
 
-export default function Project({ count }: TestProps) {
+export default function Project({
+  id,
+  count,
+  name,
+  overview,
+  preview_image = "/test.png",
+  type,
+  year,
+}: TestProps) {
   return (
     <section>
       <div className="grid grid-cols-2 gap-5 py-30 max-[701px]:grid-cols-1 max-[701px]:py-15 max-[701px]:gap-8">
@@ -30,23 +44,19 @@ export default function Project({ count }: TestProps) {
                   count % 2 == 0 ? "justify-self-end" : ""
                 } flex text-sm items-center gap-2 text-[#12F7D6] font-medium`}
               >
-                <span>Personal Project</span>
+                <span>{type}</span>
                 <span className="bg-[#12F7D6] h-1 w-1 rounded-full block"></span>
-                <span className="">2024</span>
+                <span className="">{year}</span>
               </p>
               <h1 className={`text-3xl text-white tracking-wider font-medium`}>
-                CGPA Calculator
+                {name}
               </h1>
             </div>
             <div className="relative project-text rounded-xl">
               <div className="absolute top-0 right-0 bottom-0 left-0 rounded-xl ptext-overlay"></div>
               <div className="absolute top-0 right-0 bottom-0 left-0 ptext-cover rounded-xl opacity-[8%]"></div>
               <p className="relative text-white text-sm p-4 capitalize">
-                A web-based and highly interactive application that collects the
-                course information of students along with their Grades in those
-                courses and uses the info to calculate the Grade Point Average
-                (GPA) as well as the Cumulative Grade Point Average (CGPA)
-                across Semesters and Session.
+                {overview}
               </p>
             </div>
 
@@ -79,12 +89,12 @@ export default function Project({ count }: TestProps) {
             <p
               className={`flex text-sm items-center gap-2 text-[#12F7D6] font-medium`}
             >
-              <span>Personal Project</span>
+              <span>{type}</span>
               <span className="bg-[#12F7D6] h-1 w-1 rounded-full block"></span>
-              <span className="">2024</span>
+              <span className="">{year}</span>
             </p>
             <h1 className={`text-3xl text-white tracking-wider font-medium`}>
-              CGPA Calculator
+              {name}
             </h1>
           </div>
           <div className="relative">
@@ -95,11 +105,12 @@ export default function Project({ count }: TestProps) {
             </div>
             <div className="relative">
               <Image
-                src={"/showcase_imgs/project1.png"}
-                className="w-full border-[1.5px] border-[#12F7D6] rounded-xl m-auto"
+                src={preview_image}
+                className="w-full border-[1.5px] border-[#12F7D6] h-[350px] rounded-xl object-cover object-center m-auto select-none"
                 alt="Project Image"
                 height={2000}
                 width={2000}
+                draggable={false}
               />
             </div>
           </div>

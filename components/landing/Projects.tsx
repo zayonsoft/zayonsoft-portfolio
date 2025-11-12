@@ -27,14 +27,24 @@ export default async function Projects() {
   try {
     const filePath = path.join(process.cwd(), "public", "data", "data.json");
     const file = await fs.readFile(filePath, "utf-8");
-    const dataset = JSON.parse(file) as DataProps[];
-    console.log(dataset);
+    const projectDataset = JSON.parse(file) as DataProps[];
+    // console.log(projectDataset);s
 
-    if (dataset) {
+    if (projectDataset) {
       return (
         <section className="text-white">
-          <Project count={1} />
-          <Project count={2} />
+          {projectDataset.map((project, index) => (
+            <Project
+              key={project.id}
+              count={index + 1}
+              id={project.id}
+              name={project.name}
+              overview={project.overview}
+              preview_image={project.preview_image}
+              type={project.type}
+              year={project.year}
+            />
+          ))}
         </section>
       );
     } else {

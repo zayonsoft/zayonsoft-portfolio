@@ -2,7 +2,7 @@
   {
     "id": "b5f1247c-1148-42f2-855d-34e74e1e08ba",
     "name": "CGPA Calculator",
-    "preview_image": "",
+    "preview_image": "/cgpa_calculator/hero1.png",
     "hero_images": ["/cgpa_calculator/hero1.png", "/cgpa_calculator/hero2.png"],
     "year": "2024",
     "type": "Personal  Project",
@@ -55,8 +55,108 @@
       "desc": "Built and designed the entire project – frontend, backend, database logic and deployment."
     }
   },
-  { "id": "a261ab97-628d-4b42-850a-9ae7466e9565", "name": "Precious" },
-  { "id": "5b3c570d-c46d-4f14-9bf5-fda9c7f3db89", "name": "Precious" },
+  {
+    "id": "a261ab97-628d-4b42-850a-9ae7466e9565",
+    "name": "E-LOGBOOK",
+    "preview_image": "/e_logbook/hero1.png",
+    "hero_images": ["/e_logbook/hero1.png", "/e_logbook/hero2.png"],
+    "year": "2023/2024",
+    "type": "Personal Project",
+    "overview": "A web-based software that allows users to keep daily, weekly and monthly record of their day-to-day activities, new words learnt and other necessary things in a work environment",
+    "problem": "During my 24 weeks Student Industrial Work Experience Scheme (SIWES), as part of my efforts as a beginner to improve my software development skill I decided to give, developing an electronic version of our school logbook a try.",
+    "project_images": [
+      ["/e_logbook/project00.png", "/e_logbook/project01.png"],
+      ["/e_logbook/project10.png", "/e_logbook/project11.png"],
+      ["/e_logbook/project20.png", "/e_logbook/project21.png"]
+    ],
+    "tech_stack_image": [
+      "/e_logbook/stack1.svg",
+      "/e_logbook/stack2.svg",
+      "/e_logbook/stack3.svg",
+      "/e_logbook/stack4.svg"
+    ],
+    "features": [
+      "Allows users to manage (Create, Update, Delete) weeks",
+      "Every created week has a journal that stores challenges faced during the week and also the new principles learnt during the week",
+      "Users can enter the date and comprehensive description of the work done for each day of the week",
+      "Users can generate a PDF report of their dated work description",
+      "The dashboard displays the number of weeks registered, number of Journals filled etc."
+    ],
+    "flow": [
+      "Non-registered users will visit the registration page while registered users just login with their username or email and password",
+      "Users register by entering their email, username and password",
+      "Users get registered after validation of the info entered",
+      "Login gives dashboard access and from the sidebar various segments can be accessed."
+    ],
+    "design_principles": ["Database Management", "Electronic record keeping"],
+    "challenges_solutions": [
+      {
+        "challenge": "Just starting up my software development carrier and taking up a project like this I had issues with the database queries for different users",
+        "solution": "After testing I discovered that users were able to see one another’s log report due to human error from the backend but I was able to rectify it by giving query based on user authentication."
+      },
+      {
+        "challenge": "I had issues creating the template for the frontend as my design principles were still below mediocre as at the time of development.",
+        "solution": "As time went by, I was able to adjust the frontend templates and colors to something better off than the initial design but as time goes on, the UI still needs more work"
+      }
+    ],
+    "live_demo_link": "",
+    "source_code_link": "",
+    "role": {
+      "title": "Solo developer",
+      "desc": "Built and designed the entire project – frontend, backend, database logic and deployment."
+    }
+  },
+  {
+    "id": "5b3c570d-c46d-4f14-9bf5-fda9c7f3db89",
+    "name": "QUESTION PRESENTATION APP",
+    "preview_image": "/quiz_app/project21.png",
+    "hero_images": ["/quiz_app/hero1.png", "/quiz_app/hero2.png"],
+    "year": "2024",
+    "type": "Personal  Project",
+    "overview": "A web-based application that allows presentation of questions in programs or events together with their options for different contestants.",
+    "problem": "It was a friend of mine’s turn to anchor an event, a contest of multiple stages with multiple contestants and their questions and he decided that we should use a software to increase the fun of it since we are in an era of software",
+    "project_images": [
+      ["/quiz_app/project00.png", "/quiz_app/project01.png"],
+      ["/quiz_app/project10.png", "/quiz_app/project11.png"],
+      ["/quiz_app/project20.png", "/quiz_app/project21.png"]
+    ],
+    "tech_stack_image": [
+      "/quiz_app/stack1.svg",
+      "/quiz_app/stack2.svg",
+      "/quiz_app/stack3.svg",
+      "/quiz_app/stack4.svg"
+    ],
+    "features": [
+      "Ability to create and handle more than one contest from different users",
+      "Ability to create and add Users to contests",
+      "Allows setting questions for contestants only added to a specific contest",
+      "During the setting of the question, you can enter up to four options with one of the inputs dedicated for the correct option",
+      "The logged in user has a page to control the question being currently being displayed on the contestant page",
+      "The logged in user can change the question per contestant and also the level or stage of the contest and display questions set for them.",
+      "The admin can decide to display to the contestant 50% or two correct options out of four",
+      "The admin can also display the correct answer on the screen"
+    ],
+    "flow": [
+      "Once the software is setup on the host computer, the user proceeds to create an account",
+      "Once the user or admin logs in he has access to create contests and contestants",
+      "After contest creation, stages/ levels are added to the contest",
+      "Questions are set for each contestant stage by stage in any given contest",
+      "On the contest control panel, the user controls which contest is being displayed, what level it is and for which contestant"
+    ],
+    "design_principles": ["Electronic Data Management"],
+    "challenges_solutions": [
+      {
+        "challenge": "Time Constraint was a challenge as the software was required in a short time and at the same time I was working on another important software",
+        "solution": "Through the development of reusable components and following structured programming principles and guidelines"
+      }
+    ],
+    "live_demo_link": "",
+    "source_code_link": "",
+    "role": {
+      "title": "Solo developer",
+      "desc": "Built and designed the entire project – frontend, backend, database logic and deployment."
+    }
+  },
   { "id": "46ed8ca2-11e0-4593-9fbb-70c0efd4562c", "name": "Precious" },
   { "id": "98b41822-ef0b-46fe-87df-eeddc061cdc2", "name": "Precious" }
 ]
