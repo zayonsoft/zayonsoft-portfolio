@@ -48,8 +48,8 @@
         "solution": "Design the database in such a way that it easily incorporates multiple grading systems"
       }
     ],
-    "live_demo_link": "",
-    "source_code_link": "",
+    "live_demo_link": "https://zayonsoftcgpa.pythonanywhere.com/",
+    "source_code_link": "https://github.com/zayonsoft/cgpa_calculator",
     "role": {
       "title": "Solo developer",
       "desc": "Built and designed the entire project - frontend, backend, database logic and deployment."
@@ -100,8 +100,8 @@
         "solution": "As time went by, I was able to adjust the frontend templates and colors to something better off than the initial design but as time goes on, the UI still needs more work"
       }
     ],
-    "live_demo_link": "",
-    "source_code_link": "",
+    "live_demo_link": "https://zayonsoft.pythonanywhere.com/",
+    "source_code_link": "https://github.com/zayonsoft/elogbook_backend",
     "role": {
       "title": "Solo developer",
       "desc": "Built and designed the entire project - frontend, backend, database logic and deployment."
@@ -204,7 +204,7 @@
       }
     ],
     "live_demo_link": "",
-    "source_code_link": "",
+    "source_code_link": "https://github.com/zayonsoft/question_application",
     "role": {
       "title": "Solo developer",
       "desc": "Designed and implemented the system"
@@ -258,7 +258,7 @@
       }
     ],
     "live_demo_link": "",
-    "source_code_link": "",
+    "source_code_link": "https://github.com/zayonsoft/PMS",
     "role": {
       "title": "Solo developer",
       "desc": "Designed and implemented the system"
@@ -298,8 +298,8 @@
         "solution": "Using the inspect panel of the page to find out the ID that triggers the bot modal and how it was embedded"
       }
     ],
-    "live_demo_link": "",
-    "source_code_link": "",
+    "live_demo_link": "https://egbewandechatbot.pythonanywhere.com/",
+    "source_code_link": "https://github.com/zayonsoft/smart_agro_project",
     "role": {
       "title": "Co-developer",
       "desc": "Developed the page while the User Interface and chatbot were developed by other developers"
@@ -352,8 +352,8 @@
         "solution": "Reading and implementing the tailwind CSS documentation"
       }
     ],
-    "live_demo_link": "",
-    "source_code_link": "",
+    "live_demo_link": "https://oso-miracle-portfolio.vercel.app/",
+    "source_code_link": "https://github.com/zayonsoft/oso-miracle-portfolio",
     "role": {
       "title": "Frontend Developer",
       "desc": "Developed the system based on the designed User Interface (UI) and User Experience (UX)"

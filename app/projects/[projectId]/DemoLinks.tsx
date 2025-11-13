@@ -51,7 +51,12 @@ export default function DemoLink({
                   <span>Live Demo</span>
                   {live_demo_link.trim() == "" ? null : (
                     <span className="text-sm bg-[#12F7D6] text-[#292F36] py-1.5 px-4 rounded-full">
-                      <Link className="block" href={"#"}>
+                      <Link
+                        className="block"
+                        href={live_demo_link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         Click Me
                       </Link>
                     </span>
@@ -98,7 +103,12 @@ export default function DemoLink({
                   <span>Source Code (GitHub)</span>
                   {source_code_link.trim() == "" ? null : (
                     <span className="text-sm bg-[#12F7D6] text-[#292F36] py-1.5 px-4 rounded-full">
-                      <Link className="block" href={"#"}>
+                      <Link
+                        className="block"
+                        href={source_code_link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         Click Me
                       </Link>
                     </span>
@@ -137,7 +147,6 @@ export default function DemoLink({
                   draggable={false}
                 />
               </div>
-              {/* CLick Me Shouldn't show if it's unavailable */}
               <div>
                 <p
                   className={`${ibmPlexMono.className} capitalize text-white font-medium text-lg`}
@@ -146,8 +155,6 @@ export default function DemoLink({
                 </p>
               </div>
             </div>
-
-            {/* If the project is not deployed */}
             <div className="relative">
               <div className="absolute left-0 right-0 top-0 bottom-0">
                 <div className="absolute rounded-xl left-0 right-0 top-0 bottom-0 blur-text-bg opacity-[35%]"></div>

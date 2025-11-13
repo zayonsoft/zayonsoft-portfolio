@@ -36,7 +36,7 @@ export default function Hero({
         <div className="relative grid gap-30 grid-cols-2 max-[901px]:gap-20 max-[701px]:gap-10 max-[701px]:grid-cols-1">
           <div>
             <Image
-              className="h-full rounded-xl border-[#12F7D6] border-[1.5px] select-none"
+              className="h-full rounded-xl border-[#12F7D6] border-[1.5px] select-none object-cover object-center"
               src={hero_img1}
               width={10000}
               height={1000}
@@ -46,7 +46,7 @@ export default function Hero({
           </div>
           <div>
             <Image
-              className="h-full rounded-xl border-[#12F7D6] border-[1.5px] select-none"
+              className="h-full rounded-xl border-[#12F7D6] border-[1.5px] select-none object-cover object-center"
               src={hero_img2}
               width={10000}
               height={1000}
