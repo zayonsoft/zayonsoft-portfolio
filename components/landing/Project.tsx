@@ -34,9 +34,10 @@ export default function Project({
           <div
             className={`grid items-center max-h-fit min-h-[300px] gap-2 ${ibmPlexMono.className} max-[701px]:min-h-auto max-[701px]:gap-5`}
           >
+            {/* Desktoop view Title */}
             <div
               className={`${
-                count % 2 == 0 ? "justify-self-end" : ""
+                count % 2 == 0 ? "justify-self-end text-right" : ""
               } grid gap-0 max-[701px]:hidden`}
             >
               <p
@@ -52,6 +53,7 @@ export default function Project({
                 {name}
               </h1>
             </div>
+            {/* Desktop View Title ends */}
             <div className="relative project-text rounded-xl">
               <div className="absolute top-0 right-0 bottom-0 left-0 rounded-xl ptext-overlay"></div>
               <div className="absolute top-0 right-0 bottom-0 left-0 ptext-cover rounded-xl opacity-[8%]"></div>

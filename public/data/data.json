@@ -55,6 +55,7 @@
       "desc": "Built and designed the entire project – frontend, backend, database logic and deployment."
     }
   },
+
   {
     "id": "a261ab97-628d-4b42-850a-9ae7466e9565",
     "name": "E-LOGBOOK",
@@ -106,6 +107,7 @@
       "desc": "Built and designed the entire project – frontend, backend, database logic and deployment."
     }
   },
+
   {
     "id": "5b3c570d-c46d-4f14-9bf5-fda9c7f3db89",
     "name": "QUESTION PRESENTATION APP",
@@ -157,6 +159,256 @@
       "desc": "Built and designed the entire project – frontend, backend, database logic and deployment."
     }
   },
-  { "id": "46ed8ca2-11e0-4593-9fbb-70c0efd4562c", "name": "Precious" },
-  { "id": "98b41822-ef0b-46fe-87df-eeddc061cdc2", "name": "Precious" }
+
+  {
+    "id": "98b41822-ef0b-46fe-87df-eeddc061cdc2",
+    "name": "QUESTION PRESENTATION APP",
+    "preview_image": "/quiz_app/project21.png",
+    "hero_images": ["/quiz_app/hero1.png", "/quiz_app/hero2.png"],
+    "year": "2024",
+    "type": "Personal  Project",
+    "overview": "A web-based application that allows presentation of questions in programs or events together with their options for different contestants.",
+    "problem": "It was a friend of mine’s turn to anchor an event, a contest of multiple stages with multiple contestants and their questions and he decided that we should use a software to increase the fun of it since we are in an era of software",
+    "project_images": [
+      ["/quiz_app/project00.png", "/quiz_app/project01.png"],
+      ["/quiz_app/project10.png", "/quiz_app/project11.png"],
+      ["/quiz_app/project20.png", "/quiz_app/project21.png"]
+    ],
+    "tech_stack_image": [
+      "/quiz_app/stack1.svg",
+      "/quiz_app/stack2.svg",
+      "/quiz_app/stack3.svg",
+      "/quiz_app/stack4.svg"
+    ],
+    "features": [
+      "Ability to create and handle more than one contest from different users",
+      "Ability to create and add Users to contests",
+      "Allows setting questions for contestants only added to a specific contest",
+      "During the setting of the question, you can enter up to four options with one of the inputs dedicated for the correct option",
+      "The logged in user has a page to control the question being currently being displayed on the contestant page",
+      "The logged in user can change the question per contestant and also the level or stage of the contest and display questions set for them.",
+      "The admin can decide to display to the contestant 50% or two correct options out of four",
+      "The admin can also display the correct answer on the screen"
+    ],
+    "flow": [
+      "Once the software is setup on the host computer, the user proceeds to create an account",
+      "Once the user or admin logs in he has access to create contests and contestants",
+      "After contest creation, stages/ levels are added to the contest",
+      "Questions are set for each contestant stage by stage in any given contest",
+      "On the contest control panel, the user controls which contest is being displayed, what level it is and for which contestant"
+    ],
+    "design_principles": ["Electronic Data Management"],
+    "challenges_solutions": [
+      {
+        "challenge": "Time Constraint was a challenge as the software was required in a short time and at the same time I was working on another important software",
+        "solution": "Through the development of reusable components and following structured programming principles and guidelines"
+      }
+    ],
+    "live_demo_link": "",
+    "source_code_link": "",
+    "role": {
+      "title": "Solo developer",
+      "desc": "Built and designed the entire project – frontend, backend, database logic and deployment."
+    }
+  },
+
+  {
+    "id": "46ed8ca2-11e0-4593-9fbb-70c0efd4562c",
+    "name": "LECTURE REMINDER SYSTEM",
+    "preview_image": "/lrs/project01.png",
+    "hero_images": ["/lrs/hero1.png", "/lrs/hero2.png"],
+    "year": "2025",
+    "type": "Client Project",
+    "overview": "A web-based application that gives students and lecturers email reminder on the tasks that they have for the day",
+    "problem": "The need to deliver a system that lets lecturers and students stay informed and notified about the tasks they have such as Assignments, lectures or even practical",
+    "project_images": [
+      ["/lrs/project00.png", "/lrs/project01.png"],
+      ["/lrs/project10.png", "/lrs/project11.png"],
+      ["/lrs/project20.png", "/lrs/project21.png"]
+    ],
+    "tech_stack_image": [
+      "/lrs/stack1.svg",
+      "/lrs/stack2.svg",
+      "/lrs/stack3.svg",
+      "/lrs/stack4.svg"
+    ],
+    "features": [
+      "Admin ability to create student and lecturer accounts",
+      "Lecturer creates tasks",
+      "Students view task",
+      "Tasks have due or expiry date",
+      "Students respond to task"
+    ],
+    "flow": [
+      "Admins would create accounts for the lecturers and students and they get automatically assigned their username/matric number as password",
+      "After login, the lecturers and students access their dashboard clearly displaying the tasks that they have for the day or the tasks that are due to expire on the specific date",
+      "Only lecturers can set a task and they decide whether the task should accept responses or replies",
+      "Students have a button next to each task that enables them perform and submit a task",
+      "A lecturer can view responses to the tasks",
+      "Once a task is created or modified lecturers and students offering the course will receive a notification",
+      "Everyday a notification is sent to notify the students and lecturers of the tasks they have for the day"
+    ],
+    "design_principles": ["Seamless Communication", "Data Management"],
+    "challenges_solutions": [
+      {
+        "challenge": "There was major challenge scheduling the reminders to run every day",
+        "solution": "Created a manage.py command that gets called at intervals"
+      }
+    ],
+    "live_demo_link": "",
+    "source_code_link": "",
+    "role": {
+      "title": "Solo developer",
+      "desc": "Designed and implemented the system"
+    }
+  },
+
+  {
+    "id": "00d1c48c-b772-4e3d-bf2e-9d8f5bd40708",
+    "name": "UNDERGRADUATE PROJECTS’ MANAGEMENT SYSTEM (PMS)",
+    "preview_image": "/pms/hero1.png",
+    "hero_images": ["/pms/hero1.png", "/pms/hero2.png"],
+    "year": "2024",
+    "type": "Undergraduate Thesis",
+    "overview": "A web-based application that caters for the undergraduate project needs by ensuring a seamless process from the allocation to the supervision",
+    "problem": "The need to use technology to ease the workload of lecturers, students and their coordinators by providing a platform that allows them to easily interact",
+    "project_images": [
+      ["/pms/project00.png", "/pms/project01.png"],
+      ["/pms/project10.png", "/pms/project11.png"],
+      ["/pms/project20.png", "/pms/project21.png"]
+    ],
+    "tech_stack_image": [
+      "/pms/stack1.svg",
+      "/pms/stack2.svg",
+      "/pms/stack3.svg",
+      "/pms/stack4.svg"
+    ],
+    "features": [
+      "Ability for Admins to manage all system users and components",
+      "Separate roles for lecturers, students and departmental coordinators",
+      "Departmental coordinators make set the allocation for their respective departments",
+      "The lecturers have access to the students allocated to them",
+      "Lecturer-student communication available",
+      "Students and lecturers have access to an electronic library of past projects available for use"
+    ],
+    "flow": [
+      "Admins create a new session",
+      "Admins upload final year student data for the session",
+      "Admins Update Lecturer record",
+      "Admins assign coordinators",
+      "Lecturers select their areas of specialization",
+      "Lecturers select their areas of specialization",
+      "Admins decide whether the allocation is done based on area of specialization or randomly",
+      "Admins can reallocate students",
+      "Once allocation is done, allocated students are available to lecturers and vice-versa"
+    ],
+    "design_principles": ["Automation"],
+    "challenges_solutions": [
+      {
+        "challenge": "Handling what happens if there’s imbalance between the area students wish and number of available lecturers",
+        "solution": "Ability to let the admin decide what happens by selecting whether to allocate randomly or to just leave other students unallocated"
+      }
+    ],
+    "live_demo_link": "",
+    "source_code_link": "",
+    "role": {
+      "title": "Solo developer",
+      "desc": "Designed and implemented the system"
+    }
+  },
+
+  {
+    "id": "6ae37ba8-1443-4a46-84a3-aea2954b436d",
+    "name": "SMART AGRO",
+    "preview_image": "/smart_agro/hero1.png",
+    "hero_images": ["/smart_agro/hero1.png", "/smart_agro/hero2.png"],
+    "year": "2024",
+    "type": "Undergraduate Thesis",
+    "overview": "A highly interactive and responsive website that contains embedded with a chatbot that allows users to ask about their poultry related issues and gives them apt responses in real-time.",
+    "problem": "The need to provide poultry farmers or other related individuals with real-time responses and a reliable standby solution to problems or diseases involving poultry.",
+    "project_images": [
+      ["/smart_agro/project00.png", "/smart_agro/project01.png"],
+      ["/smart_agro/project10.png", "/smart_agro/project11.png"],
+      ["/smart_agro/project20.png", "/smart_agro/project21.png"]
+    ],
+    "tech_stack_image": ["/smart_agro/stack1.svg"],
+    "features": [
+      "Sleek User Interface (UI)",
+      "Splendid User Experience (UX)",
+      "Smooth navigation through page sections",
+      "Integrated Chatbot"
+    ],
+    "flow": [
+      "Users visit the website through the Universal Resource Locator (URL)",
+      "Use the navigation links to access other components of the page or access them by scrolling through",
+      "Click the “Chatbot” button to use embedded bot."
+    ],
+    "design_principles": ["Clarity", "Accessibility", "Navigation"],
+    "challenges_solutions": [
+      {
+        "challenge": "Integrating the bot into the webpage. There were issues letting developed buttons popup chatbot.",
+        "solution": "Using the inspect panel of the page to find out the ID that triggers the bot modal and how it was embedded"
+      }
+    ],
+    "live_demo_link": "",
+    "source_code_link": "",
+    "role": {
+      "title": "Co-developer",
+      "desc": "Developed the page while the User Interface and chatbot were developed by other developers"
+    }
+  },
+  {
+    "id": "1308a364-7c86-4b8f-a9c5-f30fef284726",
+    "name": "MIRACLE JOHN’S PORTFOLIO",
+    "preview_image": "/miracle_portfolio/hero1.png",
+    "hero_images": [
+      "/miracle_portfolio/hero1.png",
+      "/miracle_portfolio/hero2.png"
+    ],
+    "year": "2025",
+    "type": "Client Project",
+    "overview": "The project is a portfolio website designed and developed for a UI designer to showcase personal and professional design works. The website highlights creativity, design process, and completed projects in an organized and engaging way. It was implemented using modern web technologies with a focus on clean interface design, responsive layout, and seamless user experience.",
+
+    "problem": "In today’s competitive design industry, a strong online presence is essential for creative professionals. The UI designer lacked a personal platform to display projects and demonstrate design expertise. This project aimed to solve that problem by developing a responsive, user-friendly portfolio website that aligns with the designer’s visual identity and enhances professional exposure.",
+
+    "project_images": [
+      ["/miracle_portfolio/project00.png", "/miracle_portfolio/project01.png"],
+      ["/miracle_portfolio/project10.png", "/miracle_portfolio/project11.png"],
+      ["/miracle_portfolio/project20.png", "/miracle_portfolio/project21.png"]
+    ],
+    "tech_stack_image": [
+      "/miracle_portfolio/stack1.svg",
+      "/miracle_portfolio/stack2.svg"
+    ],
+    "features": [
+      "Sleek User Interface (UI)",
+      "Splendid User Experience (UX)",
+      "Smooth navigation through page sections",
+      "Eye-catching animation",
+      "Light and dark theme toggling on the resume section"
+    ],
+    "flow": [
+      "The user accesses the website using the Universal Resource Locator (URL) in a browser",
+      "Use the navigation links to navigate through sections.",
+      "View Projects Details"
+    ],
+    "design_principles": [
+      "Simplicity",
+      "Clarity",
+      "Accessibility",
+      "Re-usability"
+    ],
+    "challenges_solutions": [
+      {
+        "challenge": "Overriding system default dark theme with button-controlled theme",
+        "solution": "Reading and implementing the tailwind CSS documentation"
+      }
+    ],
+    "live_demo_link": "",
+    "source_code_link": "",
+    "role": {
+      "title": "Frontend Developer",
+      "desc": "Developed the system based on the designed User Interface (UI) and User Experience (UX)"
+    }
+  }
 ]
