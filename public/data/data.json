@@ -7,7 +7,7 @@
     "year": "2024",
     "type": "Personal  Project",
     "overview": "A web-based and highly interactive application that collects the course information of students along with their Grades in those courses and uses the info to calculate the Grade Point Average (GPA) as well as the Cumulative Grade Point Average (CGPA) across Semesters and Session.",
-    "problem": "I discovered many students have no idea about how to calculate their Cumulative Grade Point Average (CGPA) and after the CGPA calculation segment of our institution’s result processing software experienced a downtime I felt the need to develop a platform that enables students calculate their Grade Points seamlessly and also track their academic performance.",
+    "problem": "I discovered many students have no idea about how to calculate their Cumulative Grade Point Average (CGPA) and after the CGPA calculation segment of our institution's result processing software experienced a downtime I felt the need to develop a platform that enables students calculate their Grade Points seamlessly and also track their academic performance.",
     "project_images": [
       ["/cgpa_calculator/project00.png", "/cgpa_calculator/project01.png"],
       ["/cgpa_calculator/project10.png", "/cgpa_calculator/project11.png"],
@@ -28,8 +28,8 @@
     ],
     "flow": [
       "Users enter their email for account creation and they get sent a confirmation code",
-      "If confirmation code is valid, then the user’s account gets created",
-      "If confirmation code is valid, then the user’s account gets created",
+      "If confirmation code is valid, then the user's account gets created",
+      "If confirmation code is valid, then the user's account gets created",
       "Users can now login with their username or email and password",
       "Users fill in info and choose their grading system",
       "Add a session or level",
@@ -52,7 +52,7 @@
     "source_code_link": "",
     "role": {
       "title": "Solo developer",
-      "desc": "Built and designed the entire project – frontend, backend, database logic and deployment."
+      "desc": "Built and designed the entire project - frontend, backend, database logic and deployment."
     }
   },
 
@@ -93,7 +93,7 @@
     "challenges_solutions": [
       {
         "challenge": "Just starting up my software development carrier and taking up a project like this I had issues with the database queries for different users",
-        "solution": "After testing I discovered that users were able to see one another’s log report due to human error from the backend but I was able to rectify it by giving query based on user authentication."
+        "solution": "After testing I discovered that users were able to see one another's log report due to human error from the backend but I was able to rectify it by giving query based on user authentication."
       },
       {
         "challenge": "I had issues creating the template for the frontend as my design principles were still below mediocre as at the time of development.",
@@ -104,7 +104,7 @@
     "source_code_link": "",
     "role": {
       "title": "Solo developer",
-      "desc": "Built and designed the entire project – frontend, backend, database logic and deployment."
+      "desc": "Built and designed the entire project - frontend, backend, database logic and deployment."
     }
   },
 
@@ -116,7 +116,7 @@
     "year": "2024",
     "type": "Personal  Project",
     "overview": "A web-based application that allows presentation of questions in programs or events together with their options for different contestants.",
-    "problem": "It was a friend of mine’s turn to anchor an event, a contest of multiple stages with multiple contestants and their questions and he decided that we should use a software to increase the fun of it since we are in an era of software",
+    "problem": "It was a friend of mine's turn to anchor an event, a contest of multiple stages with multiple contestants and their questions and he decided that we should use a software to increase the fun of it since we are in an era of software",
     "project_images": [
       ["/quiz_app/project00.png", "/quiz_app/project01.png"],
       ["/quiz_app/project10.png", "/quiz_app/project11.png"],
@@ -156,59 +156,7 @@
     "source_code_link": "",
     "role": {
       "title": "Solo developer",
-      "desc": "Built and designed the entire project – frontend, backend, database logic and deployment."
-    }
-  },
-
-  {
-    "id": "98b41822-ef0b-46fe-87df-eeddc061cdc2",
-    "name": "QUESTION PRESENTATION APP",
-    "preview_image": "/quiz_app/project21.png",
-    "hero_images": ["/quiz_app/hero1.png", "/quiz_app/hero2.png"],
-    "year": "2024",
-    "type": "Personal  Project",
-    "overview": "A web-based application that allows presentation of questions in programs or events together with their options for different contestants.",
-    "problem": "It was a friend of mine’s turn to anchor an event, a contest of multiple stages with multiple contestants and their questions and he decided that we should use a software to increase the fun of it since we are in an era of software",
-    "project_images": [
-      ["/quiz_app/project00.png", "/quiz_app/project01.png"],
-      ["/quiz_app/project10.png", "/quiz_app/project11.png"],
-      ["/quiz_app/project20.png", "/quiz_app/project21.png"]
-    ],
-    "tech_stack_image": [
-      "/quiz_app/stack1.svg",
-      "/quiz_app/stack2.svg",
-      "/quiz_app/stack3.svg",
-      "/quiz_app/stack4.svg"
-    ],
-    "features": [
-      "Ability to create and handle more than one contest from different users",
-      "Ability to create and add Users to contests",
-      "Allows setting questions for contestants only added to a specific contest",
-      "During the setting of the question, you can enter up to four options with one of the inputs dedicated for the correct option",
-      "The logged in user has a page to control the question being currently being displayed on the contestant page",
-      "The logged in user can change the question per contestant and also the level or stage of the contest and display questions set for them.",
-      "The admin can decide to display to the contestant 50% or two correct options out of four",
-      "The admin can also display the correct answer on the screen"
-    ],
-    "flow": [
-      "Once the software is setup on the host computer, the user proceeds to create an account",
-      "Once the user or admin logs in he has access to create contests and contestants",
-      "After contest creation, stages/ levels are added to the contest",
-      "Questions are set for each contestant stage by stage in any given contest",
-      "On the contest control panel, the user controls which contest is being displayed, what level it is and for which contestant"
-    ],
-    "design_principles": ["Electronic Data Management"],
-    "challenges_solutions": [
-      {
-        "challenge": "Time Constraint was a challenge as the software was required in a short time and at the same time I was working on another important software",
-        "solution": "Through the development of reusable components and following structured programming principles and guidelines"
-      }
-    ],
-    "live_demo_link": "",
-    "source_code_link": "",
-    "role": {
-      "title": "Solo developer",
-      "desc": "Built and designed the entire project – frontend, backend, database logic and deployment."
+      "desc": "Built and designed the entire project - frontend, backend, database logic and deployment."
     }
   },
 
@@ -265,7 +213,7 @@
 
   {
     "id": "00d1c48c-b772-4e3d-bf2e-9d8f5bd40708",
-    "name": "UNDERGRADUATE PROJECTS’ MANAGEMENT SYSTEM (PMS)",
+    "name": "UNDERGRADUATE PROJECTS' MANAGEMENT SYSTEM (PMS)",
     "preview_image": "/pms/hero1.png",
     "hero_images": ["/pms/hero1.png", "/pms/hero2.png"],
     "year": "2024",
@@ -305,7 +253,7 @@
     "design_principles": ["Automation"],
     "challenges_solutions": [
       {
-        "challenge": "Handling what happens if there’s imbalance between the area students wish and number of available lecturers",
+        "challenge": "Handling what happens if there's imbalance between the area students wish and number of available lecturers",
         "solution": "Ability to let the admin decide what happens by selecting whether to allocate randomly or to just leave other students unallocated"
       }
     ],
@@ -359,7 +307,7 @@
   },
   {
     "id": "1308a364-7c86-4b8f-a9c5-f30fef284726",
-    "name": "MIRACLE JOHN’S PORTFOLIO",
+    "name": "MIRACLE JOHN'S PORTFOLIO",
     "preview_image": "/miracle_portfolio/hero1.png",
     "hero_images": [
       "/miracle_portfolio/hero1.png",
@@ -369,7 +317,7 @@
     "type": "Client Project",
     "overview": "The project is a portfolio website designed and developed for a UI designer to showcase personal and professional design works. The website highlights creativity, design process, and completed projects in an organized and engaging way. It was implemented using modern web technologies with a focus on clean interface design, responsive layout, and seamless user experience.",
 
-    "problem": "In today’s competitive design industry, a strong online presence is essential for creative professionals. The UI designer lacked a personal platform to display projects and demonstrate design expertise. This project aimed to solve that problem by developing a responsive, user-friendly portfolio website that aligns with the designer’s visual identity and enhances professional exposure.",
+    "problem": "In today's competitive design industry, a strong online presence is essential for creative professionals. The UI designer lacked a personal platform to display projects and demonstrate design expertise. This project aimed to solve that problem by developing a responsive, user-friendly portfolio website that aligns with the designer's visual identity and enhances professional exposure.",
 
     "project_images": [
       ["/miracle_portfolio/project00.png", "/miracle_portfolio/project01.png"],
