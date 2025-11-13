@@ -5,6 +5,7 @@ import { BiLink } from "react-icons/bi";
 import { CgBriefcase, CgMail } from "react-icons/cg";
 import { RxDownload } from "react-icons/rx";
 import { SlLocationPin } from "react-icons/sl";
+import ResumeDownloadButton from "./ResumeDownloadButton";
 
 export const ibmPlexMono = IBM_Plex_Mono({
   weight: ["100", "200", "300", "400", "500", "600", "700"],
@@ -91,15 +92,7 @@ export default function Main() {
                     </p>
                   </section>
                   <section className="grid justify-center pt-3">
-                    <button
-                      className={`cursor-pointer flex gap-3 items-center bg-white text-[#292F36] text-lg rounded-full px-6 py-2.5 ${ubuntu.className}`}
-                      type="button"
-                    >
-                      <span>Resume</span>
-                      <span>
-                        <RxDownload size={22} />
-                      </span>
-                    </button>
+                    <ResumeDownloadButton />
                   </section>
                 </div>
               </div>
