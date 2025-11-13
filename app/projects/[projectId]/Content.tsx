@@ -17,8 +17,8 @@ import Contact from "@/components/landing/Contact";
 import Footer from "@/components/landing/Footer";
 import { DataProps } from "@/components/landing/Projects";
 
-export default async function Content() {
-  const id = "b5f1247c-1148-42f2-855d-34e74e1e08ba"; //will be dynamically gotten
+export default async function Content({ projectId }: { projectId: string }) {
+  const id = projectId;
   try {
     const filePath = path.join(process.cwd(), "public", "data", "data.json");
     const file = await fs.readFile(filePath, "utf-8");
@@ -88,7 +88,7 @@ export default async function Content() {
   } catch {
     return (
       <h1 className="grid gap-1 justify-items-center py-20 text-[#12F7D6] text-xl">
-        <span className="text-2xl">
+        <span className="text-2xl animate-pulse">
           <BsFillEmojiFrownFill />
         </span>
         <span>Sorry, Couldn't Load the page content!</span>

@@ -71,7 +71,7 @@ export default function Project({
             >
               <Link
                 className="flex gap-1 items-center p-2.5 bg-white w-fit text-[15px] font-medium rounded-full text-[#292F36]"
-                href={"#"}
+                href={`/projects/${id}`}
               >
                 <span>View Project</span>
                 <span>
