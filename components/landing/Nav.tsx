@@ -5,13 +5,14 @@ import { BsGithub, BsSearch, BsTwitterX } from "react-icons/bs";
 import SocialLink from "./SocialLink";
 import { FaFacebookF } from "react-icons/fa6";
 import FancyMenu from "./FancyMenu";
-import { FaSearch } from "react-icons/fa";
 import { HiX } from "react-icons/hi";
 import Link from "next/link";
 import NavLink from "./NavLink";
 import { FiCode, FiHome, FiMail, FiMonitor, FiUser } from "react-icons/fi";
 import { BiCopyright } from "react-icons/bi";
 import { useState, useEffect } from "react";
+import MobileSearch from "./MobileSearch";
+import HiddenSearch from "./HiddenSearch";
 const ibmPlexMono = IBM_Plex_Mono({
   weight: ["100", "200", "300", "400", "500", "600", "700"],
   subsets: ["latin"],
@@ -33,6 +34,15 @@ const socialLinkUrls = {
 
 export default function Nav() {
   const [sideOpened, setSideOpened] = useState<boolean>(false);
+  const [mobileSearchOpened, setMobileSearchOpened] = useState<boolean>(false);
+
+  function closeMobileSearch() {
+    setMobileSearchOpened(false);
+  }
+
+  function openMobileSearch() {
+    setMobileSearchOpened(true);
+  }
 
   function closeAside() {
     setSideOpened(false);
@@ -93,18 +103,17 @@ export default function Nav() {
               </label>
             </search>
           </div>
+          <HiddenSearch
+            searchOpened={mobileSearchOpened}
+            closeSearch={closeMobileSearch}
+          />
 
           {/* Social links */}
           <div className={`grid w-full justify-self-end`}>
             {/* MOBILE VIEW ICONS */}
             <div className="flex justify-evenly gap-4 items-center max-[701px]:items-center text-white">
               <span className="hidden max-[500px]:grid items-center">
-                <button
-                  className="cursor-pointer outline-none hover:bg-[#1c1c1cc4] hover:text-[#12F7D6]  p-1.5 rounded-full"
-                  type="button"
-                >
-                  <FaSearch strokeWidth={1.5} />
-                </button>
+                <MobileSearch openFunction={openMobileSearch} />
               </span>
 
               <span className="hidden max-[701px]:grid items-center">

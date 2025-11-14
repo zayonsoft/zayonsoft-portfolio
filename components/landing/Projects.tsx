@@ -28,7 +28,6 @@ export default async function Projects() {
     const filePath = path.join(process.cwd(), "public", "data", "data.json");
     const file = await fs.readFile(filePath, "utf-8");
     const projectDataset = JSON.parse(file) as DataProps[];
-    // console.log(projectDataset);s
 
     if (projectDataset) {
       return (
