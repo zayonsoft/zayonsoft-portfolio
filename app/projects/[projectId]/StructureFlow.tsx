@@ -76,7 +76,7 @@ export default function StructureFlow({ flow }: FlowProps) {
             </div>
           </div>
         </div>
-        <section className="grid gap-14">
+        <section className="grid gap-14 py-8">
           {flow.map((step, index, array) => (
             <Flow
               key={index}

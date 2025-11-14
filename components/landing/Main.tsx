@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { BiLink } from "react-icons/bi";
 import { CgBriefcase, CgMail } from "react-icons/cg";
-import { RxDownload } from "react-icons/rx";
 import { SlLocationPin } from "react-icons/sl";
 import ResumeDownloadButton from "./ResumeDownloadButton";
 
@@ -18,6 +17,7 @@ export const ubuntu = Ubuntu({
 });
 
 export default function Main() {
+  const myMail = "favourlosotu@gmail.com";
   return (
     <section
       id="home"
@@ -139,7 +139,11 @@ export default function Main() {
               <p className="flex gap-2 items-center capitalize text-3xl text-[#12F7D6] ml-5 pt-2">
                 <span className={`${ibmPlexMono.className}`}>let's talk</span>
                 <span className="text-lg bg-[#43454D] p-1.5 rounded-full">
-                  <Link href={"#"}>
+                  <Link
+                    href={`mailto:${myMail}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <CgMail />
                   </Link>
                 </span>

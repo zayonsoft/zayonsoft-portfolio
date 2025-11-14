@@ -153,7 +153,7 @@
       }
     ],
     "live_demo_link": "",
-    "source_code_link": "",
+    "source_code_link": "https://github.com/zayonsoft/question_application",
     "role": {
       "title": "Solo developer",
       "desc": "Built and designed the entire project - frontend, backend, database logic and deployment."
@@ -204,7 +204,7 @@
       }
     ],
     "live_demo_link": "",
-    "source_code_link": "https://github.com/zayonsoft/question_application",
+    "source_code_link": "https://github.com/zayonsoft/lecture-reminder-system",
     "role": {
       "title": "Solo developer",
       "desc": "Designed and implemented the system"
