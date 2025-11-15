@@ -47,6 +47,10 @@ export default function Nav() {
     setMobileSearchOpened(true);
   }
 
+  function openDesktopSearch() {
+    setDesktopSearchOpened(true);
+  }
+
   function closeAside() {
     setSideOpened(false);
   }
@@ -90,18 +94,21 @@ export default function Nav() {
           className={`grid w-full max-w-2xl justify-self-end grid-cols-2 max-[821px]:grid-cols-[1fr_auto] ${ibmPlexMono.className} gap-10  max-[820px]:gap-7 items-center`}
         >
           <div className="relative m-auto w-full grid">
-            <search className="justify-self-center border-[#12F7D6] w-full px-3 py-[5px] rounded-full border-[1.5px] min-[850px]:min-w-60 max-w-73 max-[701px]:max-w-75 max-[500px]:hidden">
+            <search
+              onClick={openDesktopSearch}
+              className="cursor-pointer justify-self-center border-[#12F7D6] w-full px-3 py-[5px] rounded-full border-[1.5px] min-[850px]:min-w-60 max-w-73 max-[701px]:max-w-75 max-[500px]:hidden"
+            >
               <label
                 className="flex gap-1.5 items-center text-sm"
                 htmlFor="search"
               >
                 <input
-                  className="outline-none border w-full text-xs text-white border-none"
+                  className="outline-none border w-full text-xs text-white border-none cursor-pointer"
                   type="text"
                   id="search"
-                  onFocus={() => setDesktopSearchOpened(true)}
+                  onFocus={openDesktopSearch}
                 />
-                <span className="text-[#12F7D6]">
+                <span className="text-[#12F7D6] cursor-pointer">
                   <BsSearch />
                 </span>
               </label>

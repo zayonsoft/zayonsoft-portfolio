@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useSearchParams, usePathname } from "next/navigation";
 
 export const urls: Record<string, string> = {
   home: "/#home",
@@ -29,6 +30,9 @@ type ControlProps = {
 
 export default function ScrollController({}) {
   const [currentSectionId, setCurrentSectionId] = useState<string>("home");
+  const params = useSearchParams();
+  const pathName = usePathname();
+  const nextSection = params.get("section");
 
   useEffect(() => {
     const currentSectionData = sectionIconMapping[currentSectionId];
@@ -74,10 +78,22 @@ export default function ScrollController({}) {
       const href = link.getAttribute("href");
       const sectionId = href?.slice(2) || "";
       const section = document.getElementById(sectionId);
-      section?.scrollIntoView()
+      section?.scrollIntoView();
     });
     //get the attribute href to know where to scroll to
   }
+
+  function scrollToNextPageSection(sectionId: string) {
+    const section = document.getElementById(sectionId);
+    setTimeout(() => {
+      section?.scrollIntoView();
+    }, 500);
+  }
+
+  useEffect(() => {
+    if (pathName == "/")
+      nextSection ? scrollToNextPageSection(nextSection) : null;
+  }, []);
 
   useEffect(() => {
     function elementControl(elementId: string): ControlProps {

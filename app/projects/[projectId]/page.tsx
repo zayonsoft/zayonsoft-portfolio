@@ -7,7 +7,6 @@ export default async function ProjectPage({
   params: Promise<{ projectId: string }>;
 }) {
   const { projectId } = await params;
-  console.log(projectId);
   return (
     <section>
       <div className="relative z-[100000]">
