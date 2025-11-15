@@ -55,8 +55,15 @@ export default function HiddenSearch({
     search != "" ? setFilteredProjects(filtered) : setFilteredProjects([]);
   }
 
+  function closeAsideWhenClicked(e: React.MouseEvent<HTMLElement>) {
+    if (e.target == e.currentTarget) {
+      closeSearch();
+    }
+  }
+
   return (
     <section
+      onClick={(e) => closeAsideWhenClicked(e)}
       className={`custom-transition fixed top-0 left-0 hidden bottom-0 overflow-x-hidden bg-[#5c6371b3] border-b-1 border-b-[#43454d] max-[701px]:block ${
         searchOpened ? "right-0" : "right-full"
       }`}
