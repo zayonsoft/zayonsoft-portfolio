@@ -4,7 +4,7 @@ import { useSearchParams, usePathname } from "next/navigation";
 
 export const urls: Record<string, string> = {
   home: "/#home",
-  about: "/#about",
+  about: "/#about", 
   skills: "/#skills",
   my_work: "/#my_work",
   contact: "/#contact",

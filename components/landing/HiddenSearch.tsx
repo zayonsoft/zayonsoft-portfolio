@@ -101,8 +101,8 @@ export default function HiddenSearch({
   return (
     <section
       onClick={(e) => closeAsideWhenClicked(e)}
-      className={`fixed p-1 top-0 left-0 bottom-0 overflow-x-hidden bg-[rgba(0,0,0,0.5)] border-b-1 border-b-[#43454d]  ${
-        searchOpened ? "right-0" : "right-full"
+      className={`fixed top-0 left-0 bottom-0 overflow-x-hidden bg-[rgba(0,0,0,0.5)] border-b-1 border-b-[#43454d]  ${
+        searchOpened ? "right-0 p-1" : "right-full"
       }`}
     >
       <div className="grid items-center bg-[#292f36] py-2 max-w-[600px] m-auto rounded-sm">
