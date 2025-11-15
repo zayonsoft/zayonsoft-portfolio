@@ -6,6 +6,10 @@
   }
 }
 
+.fix-search-body {
+  overflow-y: hidden;
+}
+
 * {
   scroll-behavior: smooth;
 }

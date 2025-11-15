@@ -35,9 +35,12 @@ const socialLinkUrls = {
 export default function Nav() {
   const [sideOpened, setSideOpened] = useState<boolean>(false);
   const [mobileSearchOpened, setMobileSearchOpened] = useState<boolean>(false);
+  const [desktopSearchOpened, setDesktopSearchOpened] =
+    useState<boolean>(false);
 
   function closeMobileSearch() {
     setMobileSearchOpened(false);
+    setDesktopSearchOpened(false);
   }
 
   function openMobileSearch() {
@@ -86,8 +89,8 @@ export default function Nav() {
         <div
           className={`grid w-full max-w-2xl justify-self-end grid-cols-2 max-[821px]:grid-cols-[1fr_auto] ${ibmPlexMono.className} gap-10  max-[820px]:gap-7 items-center`}
         >
-          <div className="m-auto w-full grid justify-center">
-            <search className="border-[#12F7D6] w-full px-3 py-[5px] rounded-full border-[1.5px] min-[850px]:min-w-60 max-w-73 max-[701px]:max-w-60 max-[500px]:hidden">
+          <div className="relative m-auto w-full grid">
+            <search className="justify-self-center border-[#12F7D6] w-full px-3 py-[5px] rounded-full border-[1.5px] min-[850px]:min-w-60 max-w-73 max-[701px]:max-w-75 max-[500px]:hidden">
               <label
                 className="flex gap-1.5 items-center text-sm"
                 htmlFor="search"
@@ -96,12 +99,17 @@ export default function Nav() {
                   className="outline-none border w-full text-xs text-white border-none"
                   type="text"
                   id="search"
+                  onFocus={() => setDesktopSearchOpened(true)}
                 />
                 <span className="text-[#12F7D6]">
                   <BsSearch />
                 </span>
               </label>
             </search>
+            <HiddenSearch
+              searchOpened={desktopSearchOpened}
+              closeSearch={closeMobileSearch}
+            />
           </div>
           <HiddenSearch
             searchOpened={mobileSearchOpened}

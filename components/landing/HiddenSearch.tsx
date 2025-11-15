@@ -35,8 +35,8 @@ export default function HiddenSearch({
         : null;
       searchInput ? searchInput.focus() : null;
     }
-    if (searchOpened) document.body.classList.add("fix-body");
-    else document.body.classList.remove("fix-body");
+    if (searchOpened) document.body.classList.add("fix-search-body");
+    else document.body.classList.remove("fix-search-body");
     setCurrentSearch("");
   }, [searchOpened]);
 
@@ -64,11 +64,11 @@ export default function HiddenSearch({
   return (
     <section
       onClick={(e) => closeAsideWhenClicked(e)}
-      className={`custom-transition fixed top-0 left-0 hidden bottom-0 overflow-x-hidden bg-[#5c6371b3] border-b-1 border-b-[#43454d] max-[701px]:block ${
+      className={`custom-transition fixed top-0 left-0 bottom-0 overflow-x-hidden bg-[rgba(0,0,0,0.5)] border-b-1 border-b-[#43454d]  ${
         searchOpened ? "right-0" : "right-full"
       }`}
     >
-      <div className="grid items-center bg-[#292f36] py-2">
+      <div className="grid items-center bg-[#292f36] py-2 max-w-[600px] m-auto rounded-bl-sm rounded-br-sm">
         <search className="grid grid-cols-[1fr_auto] items-center gap-1.5 w-full px-5">
           <span>
             <input
