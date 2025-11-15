@@ -9,6 +9,8 @@ const socialLinkUrls = {
   facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL || "",
 };
 
+const designerLink = process.env.NEXT_PUBLIC_DESIGNER_LINK || "";
+
 export default function Footer() {
   return (
     <section
@@ -57,7 +59,9 @@ export default function Footer() {
           <span>
             <Link
               className="custom-transition text-[#12F7D6] hover:text-[#98FAEC]"
-              href={"#"}
+              href={designerLink}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Miracle John
             </Link>

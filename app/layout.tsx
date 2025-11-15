@@ -5,6 +5,12 @@ export const metadata: Metadata = {
   title: "ZAYONSOFT PORTFOLIO | TONY-AKINLOSOTU FAVOUR ADENIRAN",
   description: "TONY-AKINLOSOTU FAVOUR ADENIRAN",
   icons: { icon: "/logo.png" },
+  openGraph: {
+    title: "ZAYONSOFT's PORTFOLIO | TONY-AKINLOSOTU FAVOUR ADENIRAN",
+    description:
+      "I am a full-stack web developer specializing in building dynamic and responsive web applications using React.js and Next.js on the frontend, paired with Django for backend development. My expertise lies in creating seamless user experiences through modern frontend technologies while ensuring robust, scalable, and secure server-side architectures. I focus on writing clean, maintainable code, integrating APIs, and optimizing applications for performance. From concept to deployment, I deliver end-to-end solutions that are both visually appealing and functionally efficient.",
+    images: [`/page_cover.png`],
+  },
 };
 
 export default function RootLayout({
