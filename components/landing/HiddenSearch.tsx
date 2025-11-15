@@ -13,6 +13,7 @@ export default function HiddenSearch({
 }) {
   const [projects, setProjects] = useState<DataProps[]>([]);
   const [filteredProjects, setFilteredProjects] = useState<DataProps[]>([]);
+  const [currentSearch, setCurrentSearch] = useState<string>("");
   const searchRef = useRef(null);
   useEffect(() => {
     fetch("/data/data.json")
@@ -36,8 +37,12 @@ export default function HiddenSearch({
     }
     if (searchOpened) document.body.classList.add("fix-body");
     else document.body.classList.remove("fix-body");
-    updateFilteredProject("");
+    setCurrentSearch("");
   }, [searchOpened]);
+
+  useEffect(() => {
+    updateFilteredProject(currentSearch);
+  }, [currentSearch]);
 
   function updateFilteredProject(search: string) {
     search = search.trim();
@@ -47,7 +52,7 @@ export default function HiddenSearch({
         project.year.toLocaleUpperCase().includes(search.toUpperCase()) ||
         project.type.toLocaleUpperCase().includes(search.toUpperCase())
     );
-    setFilteredProjects(filtered);
+    search != "" ? setFilteredProjects(filtered) : setFilteredProjects([]);
   }
 
   return (
@@ -60,12 +65,15 @@ export default function HiddenSearch({
         <search className="grid grid-cols-[1fr_auto] items-center gap-1.5 w-full px-5">
           <span>
             <input
-              onChange={(e) => updateFilteredProject(e.target.value)}
+              onChange={(e) => {
+                setCurrentSearch(e.target.value);
+              }}
               ref={searchRef}
               placeholder="Search"
               className="block py-2 px-1 outline-none w-full bg-[#292f36] text-sm text-white placeholder:text-gray-500"
               id="hidden-search"
               type="text"
+              value={currentSearch}
             />
           </span>
           <span className="text-white text-2xl">
@@ -75,7 +83,10 @@ export default function HiddenSearch({
           </span>
         </search>
         <div className="p-5 grid gap-1">
-          <p className="text-gray-500 text-xs">Projects</p>
+          {filteredProjects.length != 0 ? (
+            <p className="text-gray-500 text-xs">Projects</p>
+          ) : null}
+
           {filteredProjects.map(({ name, id, year, type }, index) => (
             <Link
               key={index + 1}
@@ -96,7 +107,9 @@ export default function HiddenSearch({
           ))}
 
           {filteredProjects.length == 0 ? (
-            <p className="text-gray-400 px-2 text-sm text-center">No result</p>
+            <p className="text-gray-400 px-2 text-sm text-center">
+              {currentSearch.trim() == "" ? "Try Searching" : "No Match Found"}
+            </p>
           ) : null}
         </div>
       </div>
