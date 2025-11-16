@@ -28,6 +28,10 @@
   border-radius: 5px;
 }
 
+.modal::-webkit-scrollbar-thumb {
+  background: rgb(164, 164, 164);
+}
+
 .custom-transition {
   transition: 0.8s ease-in-out;
 }

@@ -2,8 +2,12 @@
 import { useState, useEffect, useRef } from "react";
 import { ubuntu } from "./Main";
 
-export default function ContactTextarea() {
-  const [value, setValue] = useState("");
+type TextareaProps = {
+  value: string;
+  setValue: (value: string) => void;
+};
+
+export default function ContactTextarea({ value, setValue }: TextareaProps) {
   const [changed, setChanged] = useState<boolean>(false);
   const [checked, setChecked] = useState<boolean>(false);
 
