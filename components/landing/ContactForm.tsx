@@ -100,7 +100,7 @@ export default function ContactForm({}) {
           </label>
           <input
             id="sender-name"
-            name="text"
+            name="name"
             type="text"
             placeholder="Enter your name"
             className="capitalize text-white font-light w-full placeholder:text-gray-400 placeholder:text-sm placeholder:font-light py-1 outline-none border-b-1 border-b-[#98FAEC] border-l-0"
@@ -117,7 +117,7 @@ export default function ContactForm({}) {
           </label>
           <input
             id="sender-mail"
-            name="text"
+            name="email"
             type="email"
             placeholder="Enter your email"
             className="text-white font-light placeholder:text-gray-400 placeholder:text-sm placeholder:font-light py-1 outline-none border-b-1 border-b-[#98FAEC] border-l-0"
