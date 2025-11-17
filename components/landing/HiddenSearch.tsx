@@ -134,6 +134,7 @@ export default function HiddenSearch({
 
           {filteredProjects.map(({ name, id, year, type }, index) => (
             <Link
+              onClick={closeSearch}
               key={index + 1}
               className="grid gap-3 grid-cols-[auto_1fr] items-start w-full text-gray-300 px-2 py-2.5 rounded-sm hover:bg-[#5c637177]"
               href={`/projects/${id}`}
