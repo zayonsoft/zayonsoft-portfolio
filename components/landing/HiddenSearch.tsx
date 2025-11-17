@@ -121,7 +121,10 @@ export default function HiddenSearch({
             />
           </span>
           <span className="text-white text-2xl">
-            <button onClick={closeSearch} className="cursor-pointer">
+            <button
+              onClick={closeSearch}
+              className="cursor-pointer rounded-full p-1.5 custom-transition hover:bg-[rgba(84,84,84,0.3)]"
+            >
               <HiX />
             </button>
           </span>

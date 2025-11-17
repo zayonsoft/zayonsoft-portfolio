@@ -184,6 +184,7 @@ export default function Nav() {
               <ul className="grid gap-3">
                 <li>
                   <NavLink
+                    asideCloser={closeAside}
                     icon={<FiHome />}
                     url={urls.home.url}
                     id={urls.home.id}
@@ -192,6 +193,7 @@ export default function Nav() {
                 </li>
                 <li>
                   <NavLink
+                    asideCloser={closeAside}
                     icon={<FiUser />}
                     id={urls.about.id}
                     url={urls.about.url}
@@ -200,6 +202,7 @@ export default function Nav() {
                 </li>
                 <li>
                   <NavLink
+                    asideCloser={closeAside}
                     icon={<FiCode />}
                     id={urls.skills.id}
                     url={urls.skills.url}
@@ -208,6 +211,7 @@ export default function Nav() {
                 </li>
                 <li>
                   <NavLink
+                    asideCloser={closeAside}
                     icon={<FiMonitor />}
                     id={urls.my_work.id}
                     url={urls.my_work.url}
@@ -216,6 +220,7 @@ export default function Nav() {
                 </li>
                 <li>
                   <NavLink
+                    asideCloser={closeAside}
                     icon={<FiMail />}
                     id={urls.contact.id}
                     url={urls.contact.url}
