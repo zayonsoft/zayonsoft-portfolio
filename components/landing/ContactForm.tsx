@@ -19,7 +19,7 @@ export default function ContactForm({}) {
   const [messageType, setMessageType] = useState<"error" | "success">("error");
   const [loading, setLoading] = useState<boolean>(false);
 
-  function ContactFormSubmitter(contactForm: HTMLFormElement) {
+  function ContactFormSubmitter() {
     const contactURL = process.env.NEXT_PUBLIC_CONTACT_BACKEND_URL;
     if (!formOkay) {
       bindModalError("Incomplete Form");
@@ -47,10 +47,10 @@ export default function ContactForm({}) {
               "We'll try to get back as soon as possible",
             ]);
           }
+          resetContactForm();
         })
         .catch((err) => {
           if (err.status) {
-            // bindModalError(err);
             if (err.response) {
               if (err.response.status == 500) {
                 setExtraDetails([
@@ -94,6 +94,12 @@ export default function ContactForm({}) {
       return;
     }
     // make The API Call
+  }
+
+  function resetContactForm() {
+    setEmail("");
+    setName("");
+    setMessage("");
   }
 
   function updateEmail(value: string) {
@@ -142,8 +148,10 @@ export default function ContactForm({}) {
       internalOkay = false;
       internalErrorList.push("Message Cannot be left blank");
     }
-    setExtraDetails(internalErrorList);
-    setFormOkay(internalOkay);
+    if (!modalOpened) {
+      setExtraDetails(internalErrorList);
+      setFormOkay(internalOkay);
+    }
   }, [name, email, message]);
 
   useEffect(() => {
@@ -156,7 +164,7 @@ export default function ContactForm({}) {
       action=""
       onSubmit={(e) => {
         e.preventDefault();
-        ContactFormSubmitter(e.currentTarget);
+        ContactFormSubmitter();
       }}
     >
       <section className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-20 max-[701px]:gap-10">
