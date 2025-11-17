@@ -101,7 +101,7 @@ export default function HiddenSearch({
   return (
     <section
       onClick={(e) => closeAsideWhenClicked(e)}
-      className={`fixed top-0 left-0 bottom-0 overflow-x-hidden bg-[rgba(0,0,0,0.5)] border-b-1 border-b-[#43454d]  ${
+      className={`fixed top-0 left-0 bottom-0 overflow-x-hidden bg-[#00000080] border-b-1 border-b-[#43454d]  ${
         searchOpened ? "right-0 p-1" : "right-full"
       }`}
     >

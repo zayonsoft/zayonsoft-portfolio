@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 import MessageModal from "../general/MessageModal";
 import { BiLoader } from "react-icons/bi";
+import axios from "axios";
 
 export default function ContactForm({}) {
   const [name, setName] = useState<string>("");
@@ -19,11 +20,79 @@ export default function ContactForm({}) {
   const [loading, setLoading] = useState<boolean>(false);
 
   function ContactFormSubmitter(contactForm: HTMLFormElement) {
+    const contactURL = process.env.NEXT_PUBLIC_CONTACT_BACKEND_URL;
     if (!formOkay) {
       bindModalError("Incomplete Form");
       return;
     }
-    // setLoading(true);
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("body", message);
+    setLoading(true);
+    if (contactURL) {
+      axios
+        .post(contactURL, formData)
+        .then((response) => {
+          if (response.data.detail) {
+            bindModalSuccess(response.data.detail);
+            setExtraDetails([
+              "Thank you for reaching out.",
+              "We'll try to get back as soon as possible",
+            ]);
+          } else {
+            bindModalSuccess("Success");
+            setExtraDetails([
+              "Thank you for reaching out.",
+              "We'll try to get back as soon as possible",
+            ]);
+          }
+        })
+        .catch((err) => {
+          if (err.status) {
+            // bindModalError(err);
+            if (err.response) {
+              if (err.response.status == 500) {
+                setExtraDetails([
+                  "Something went wrong on our end. Please try again later.",
+                ]);
+                bindModalError("Internal Server Error");
+              } else {
+                console.log(err.response.data.detail);
+                if (err.response.data) {
+                  setExtraDetails(["Please try again later"]);
+                  bindModalError(
+                    err.response.data.detail
+                      ? err.response.data.detail
+                      : "An Error Occured"
+                  );
+                } else {
+                  setExtraDetails(["Please try again later"]);
+                  bindModalError("An Error Occured");
+                }
+              }
+            }
+          } else {
+            bindModalError("Network Error!");
+            setExtraDetails([
+              "Unable to connect. Check your internet and try again",
+              "If the issue persists, try again later.",
+            ]);
+          }
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    } else {
+      bindModalError("A technical error has occurred.");
+      setExtraDetails([
+        "Don't worry - it's not your fault.",
+        "If you are the owner, please contact your IT personnel.",
+        `<b class="text-gray-700">Possible cause:</b> A backend endpoint was not configured.`,
+      ]);
+      setLoading(false);
+      return;
+    }
     // make The API Call
   }
 

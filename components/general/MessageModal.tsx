@@ -16,8 +16,8 @@ export default function MessageModal({
   type,
 }: ModalProps) {
   useEffect(() => {
-    if (open) document.body.classList.add("fix-body");
-    else document.body.classList.remove("fix-body");
+    if (open) document.body.classList.add("fix-search-body");
+    else document.body.classList.remove("fix-search-body");
   }, [open]);
 
   return (
@@ -27,7 +27,7 @@ export default function MessageModal({
       } z-[5000000] inset-0 overflow-y-auto`}
       id="my-modal"
     >
-      <div className="bg-[#6a7282bf] h-screen fixed top-0 right-0 bottom-0 left-0">
+      <div className="bg-[#00000080] h-screen fixed top-0 right-0 bottom-0 left-0">
         <div
           className="absolute bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl -translate-1/2 top-1/2 left-1/2 transition-all sm:align-middle max-w-sm w-10/12"
           role="dialog"
@@ -56,11 +56,13 @@ export default function MessageModal({
               >
                 {message}
               </h3>
-              <div className="mt-2 max-h-[50px] overflow-y-scroll modal">
+              <div className="mt-2 max-h-[65px] overflow-y-scroll modal">
                 {extra_msgs?.map((msg, index) => (
-                  <p key={index} className="text-sm text-gray-500">
-                    {msg}
-                  </p>
+                  <p
+                    dangerouslySetInnerHTML={{ __html: msg }}
+                    key={index}
+                    className="text-sm text-gray-500"
+                  ></p>
                 ))}
               </div>
             </div>
