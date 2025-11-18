@@ -2,7 +2,6 @@ import FancyUnderline from "@/components/general/FancyUnderline";
 import { ibmPlexMono, ubuntu } from "@/components/landing/Main";
 import Image from "next/image";
 import Link from "next/link";
-import { v4 } from "uuid";
 
 type DLProps = {
   live_demo_link: string;

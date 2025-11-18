@@ -1,7 +1,6 @@
 "use client";
 import FancyUnderline from "@/components/general/FancyUnderline";
-import { ibmPlexMono, ubuntu } from "@/components/landing/Main";
-import { v4 } from "uuid";
+import { ubuntu } from "@/components/landing/Main";
 import Flow from "./Flow";
 import { useEffect, useState } from "react";
 
@@ -11,12 +10,12 @@ type FlowProps = {
 
 export default function StructureFlow({ flow }: FlowProps) {
   const [currentFlow, setCurrentFlow] = useState<number>(0);
-  const [flowData, setFlowData] = useState<Record<string | number, any>>({
+  const [flowData, setFlowData] = useState<Record<string | number, boolean>>({
     0: true,
   });
 
   useEffect(() => {
-    flow.map((_item, index, _array) => {
+    flow.map((_item, index) => {
       if (index != 0) {
         setFlowData((prev) => ({ ...prev, [index]: false }));
       }
@@ -28,8 +27,8 @@ export default function StructureFlow({ flow }: FlowProps) {
   }, [currentFlow]);
 
   function fadeAll() {
-    let newData: any = { 0: true };
-    flow.map((_item, index, _array) => {
+    const newData: Record<string | number, boolean> = { 0: true };
+    flow.map((_item, index) => {
       if (index != 0) {
         newData[index] = false;
       }
@@ -51,7 +50,7 @@ export default function StructureFlow({ flow }: FlowProps) {
   }
 
   useEffect(() => {
-    let timerID = setInterval(() => {
+    const timerID = setInterval(() => {
       incrementFlow();
     }, 1500);
     return () => {

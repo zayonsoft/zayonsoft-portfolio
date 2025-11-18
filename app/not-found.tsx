@@ -1,6 +1,6 @@
 import { ubuntu } from "@/components/landing/Main";
 import Nav from "@/components/landing/Nav";
-import { BsEmojiFrown, BsFillEmojiFrownFill } from "react-icons/bs";
+import { BsFillEmojiFrownFill } from "react-icons/bs";
 export default function NotFound() {
   return (
     <section>
@@ -13,7 +13,9 @@ export default function NotFound() {
             <span className="text-2xl">
               <BsFillEmojiFrownFill />
             </span>
-            <span>Sorry, the page you're looking for could not be found!</span>
+            <span>
+              Sorry, the page you&#39;re looking for could not be found!
+            </span>
           </h1>
         </div>
       </section>

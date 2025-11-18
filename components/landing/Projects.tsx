@@ -55,7 +55,7 @@ export default async function Projects() {
         <span className="text-2xl">
           <BsEmojiFrown />
         </span>
-        <span>Couldn't Load Projects!</span>
+        <span>Couldn&apos;t Load Projects!</span>
       </h1>
     );
   }

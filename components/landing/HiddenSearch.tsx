@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaProjectDiagram, FaSearch } from "react-icons/fa";
+import { FaProjectDiagram } from "react-icons/fa";
 import { HiX } from "react-icons/hi";
 import { useEffect, useState, useRef } from "react";
 import { DataProps } from "./Projects";
@@ -48,7 +48,7 @@ export default function HiddenSearch({
 
   useEffect(() => {
     if (searchOpened) {
-      let searchInput = searchRef.current
+      const searchInput = searchRef.current
         ? (searchRef.current as HTMLInputElement)
         : null;
       searchInput ? searchInput.focus() : null;

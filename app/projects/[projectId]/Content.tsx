@@ -91,7 +91,7 @@ export default async function Content({ projectId }: { projectId: string }) {
         <span className="text-2xl animate-pulse">
           <BsFillEmojiFrownFill />
         </span>
-        <span>Sorry, Couldn't Load the page content!</span>
+        <span>Sorry, Couldn&apos;t Load the page content!</span>
       </h1>
     );
   }

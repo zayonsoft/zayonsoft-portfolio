@@ -4,7 +4,7 @@ import { useSearchParams, usePathname } from "next/navigation";
 
 export const urls: Record<string, string> = {
   home: "/#home",
-  about: "/#about", 
+  about: "/#about",
   skills: "/#skills",
   my_work: "/#my_work",
   contact: "/#contact",
@@ -42,7 +42,7 @@ export default function ScrollController({}) {
   }, [currentSectionId]);
 
   function removeAllActive() {
-    for (var i in sectionIconMapping) {
+    for (const i in sectionIconMapping) {
       const eachSectionObject = sectionIconMapping[i];
       const mobileId = eachSectionObject.mobile;
       const desktopId = eachSectionObject.desktop;
@@ -62,7 +62,7 @@ export default function ScrollController({}) {
   }
 
   function scrollWithoutHashingUrl() {
-    for (var i in sectionIconMapping) {
+    for (const i in sectionIconMapping) {
       const eachSectionObject = sectionIconMapping[i];
       const mobileId = eachSectionObject.mobile;
       const desktopId = eachSectionObject.desktop;
@@ -72,7 +72,7 @@ export default function ScrollController({}) {
   }
 
   function scrollToSection(id: string) {
-    let link = document.getElementById(id);
+    const link = document.getElementById(id);
     link?.addEventListener("click", (e) => {
       e.preventDefault();
       const href = link.getAttribute("href");
@@ -100,11 +100,11 @@ export default function ScrollController({}) {
       const fixedHeader = document.getElementById("header");
       const headerHeight = fixedHeader?.getBoundingClientRect().height || 0;
 
-      let element = document.getElementById(elementId);
+      const element = document.getElementById(elementId);
       const elementTop = element?.getBoundingClientRect().top || 0;
       const elementHeight = element?.getBoundingClientRect().height || 0;
-      let calculatedTop = elementTop - headerHeight;
-      let screenPortion = elementHeight + calculatedTop;
+      const calculatedTop = elementTop - headerHeight;
+      const screenPortion = elementHeight + calculatedTop;
       //negative screen portion means it has been totally scrolled past
       return {
         id: elementId,
@@ -127,9 +127,9 @@ export default function ScrollController({}) {
       // Declaring the objects variable they'll be used to decide which of the closest two has more screen portion
       let smallestPositiveData: ControlProps = elementControl("home");
       let largestNegativeData: ControlProps = elementControl("home");
-      for (var i in urls) {
-        let specificUrl = urls[i];
-        let sectionId = specificUrl.slice(2);
+      for (const i in urls) {
+        const specificUrl = urls[i];
+        const sectionId = specificUrl.slice(2);
         const sectionData = elementControl(sectionId);
         // Finding the Largest Negative
         if (sectionData.top < 0 && sectionData.top > largestNegative) {
@@ -144,7 +144,7 @@ export default function ScrollController({}) {
         // console.log(sectionData);
       }
 
-      let screenHeight = window.innerHeight;
+      const screenHeight = window.innerHeight;
 
       // If the upper section covers 35% of the screen then it'll be considered the active section
       if (largestNegativeData.screen_portion > screenHeight * 0.35) {

@@ -5,8 +5,8 @@ import Image from "next/image";
 type FlowProps = {
   step: string;
   index: number;
-  array: String[];
-  flowData: Record<string | number, any>;
+  array: string[];
+  flowData: Record<string | number, boolean>;
 };
 export default function Flow({ index, array, step, flowData }: FlowProps) {
   return (

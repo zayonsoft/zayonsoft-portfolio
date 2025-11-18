@@ -117,7 +117,7 @@ export default function Main() {
               <div className={`grid gap-3 pl-4  text-4xl ${ubuntu}`}>
                 <h1>Hey</h1>
                 <h1>
-                  I'm <span className="text-[#12F7D6]">Favour</span>,
+                  I&apos;m <span className="text-[#12F7D6]">Favour</span>,
                 </h1>
                 <h1>
                   <span>Full-stack developer </span>
@@ -137,13 +137,16 @@ export default function Main() {
                 className={`${ibmPlexMono.className} tracking-wider text-sm pl-4 font-normal`}
               >
                 I help business grow by crafting amazing web experiences. If
-                you're looking for a developer that likes to get stuff done.
+                you&apos;re looking for a developer that likes to get stuff
+                done.
               </p>
               <p className={`${ibmPlexMono.className} text-xs text-[#98FAEC]`}>
                 {"</p>"}
               </p>
               <p className="flex gap-2 items-center capitalize text-3xl text-[#12F7D6] ml-5 pt-2">
-                <span className={`${ibmPlexMono.className}`}>let's talk</span>
+                <span className={`${ibmPlexMono.className}`}>
+                  let&apos;s talk
+                </span>
                 <span className="text-lg bg-[#43454D] p-1.5 rounded-full">
                   <Link
                     href={`mailto:${myMail}`}

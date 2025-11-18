@@ -2,12 +2,11 @@
 import Skill from "./Skill";
 import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
-import Image from "next/image";
 import { ubuntu, ibmPlexMono } from "./Main";
 import FancyUnderline from "../general/FancyUnderline";
 
 export default function CoreSkills() {
-  let skillList = [
+  const skillList = [
     { name: "Coding", percentage: "90%" },
     { name: "Problem solving", percentage: "65%" },
     { name: "Critical thinking", percentage: "90%" },

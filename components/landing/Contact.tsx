@@ -29,7 +29,7 @@ export default function Contact() {
           <p
             className={` text-white ${ibmPlexMono.className} tracking-wider text-center text-sm m-auto`}
           >
-            I'm currently available for freelance work
+            I&apos;m currently available for freelance work
           </p>
         </div>
         <section className="grid gap-10">

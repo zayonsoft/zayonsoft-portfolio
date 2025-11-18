@@ -14,7 +14,7 @@ let yearDeveloped = process.env.NEXT_PUBLIC_YEAR_DEVELOPED || 2025;
 const currentYear = new Date().getFullYear();
 
 yearDeveloped = Number(yearDeveloped) ? Number(yearDeveloped) : 2025;
-let footerDate =
+const footerDate =
   currentYear == yearDeveloped
     ? `${2025}`
     : `${yearDeveloped} - ${currentYear}`;

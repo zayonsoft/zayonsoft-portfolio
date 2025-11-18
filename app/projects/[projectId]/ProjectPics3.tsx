@@ -1,4 +1,3 @@
-import { ubuntu } from "@/components/landing/Main";
 import Image from "next/image";
 
 type ProjectPicsProps = {

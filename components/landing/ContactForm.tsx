@@ -131,7 +131,7 @@ export default function ContactForm({}) {
   useEffect(() => {
     setFormOkay(true); //first clear the previous error
     let internalOkay = true;
-    let internalErrorList: string[] = [];
+    const internalErrorList: string[] = [];
     if (!name.trim()) {
       internalOkay = false;
       internalErrorList.push("Name Cannot be blank!");
