@@ -103,13 +103,13 @@ export default function ContactForm({}) {
   }
 
   function updateEmail(value: string) {
-    if (!loading) setEmail(value);
+    if (!(loading || modalOpened)) setEmail(value);
   }
   function updateMessage(value: string) {
-    if (!loading) setMessage(value);
+    if (!(loading || modalOpened)) setMessage(value);
   }
   function updateName(value: string) {
-    if (!loading) setName(value);
+    if (!(loading || modalOpened)) setName(value);
   }
 
   function bindModalError(message: string) {
