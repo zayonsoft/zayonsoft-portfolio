@@ -18,6 +18,12 @@ export const ubuntu = Ubuntu({
 
 export default function Main() {
   const myMail = "favourlosotu@gmail.com";
+  const numberOfLanguages =
+    Number(process.env.NEXT_PUBLIC_NO_OF_LANGUAGES) || 0;
+  const numberOfDevTools = Number(process.env.NEXT_PUBLIC_NO_OF_DEV_TOOLS) || 0;
+  const startYear =
+    Number(process.env.NEXT_PUBLIC_START_YEAR) || new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
   return (
     <section
       id="home"
@@ -161,7 +167,7 @@ export default function Main() {
           className={`${ibmPlexMono.className} flex gap-10 max-[550px]:flex-col`}
         >
           <div className="flex items-center gap-2">
-            <h2 className="text-[#12F7D6] text-5xl">4</h2>
+            <h2 className="text-[#12F7D6] text-5xl">{numberOfLanguages}</h2>
             <p className="text-white grid text-xs">
               <span>Programing</span>
               <span>Language</span>
@@ -169,14 +175,16 @@ export default function Main() {
           </div>
 
           <div className="flex items-center gap-2">
-            <h2 className="text-[#12F7D6] text-5xl">6</h2>
+            <h2 className="text-[#12F7D6] text-5xl">{numberOfDevTools}</h2>
             <p className="text-white grid text-xs">
               <span>Development</span>
               <span>Tools</span>
             </p>
           </div>
           <div className="flex items-center gap-2">
-            <h2 className="text-[#12F7D6] text-5xl">8</h2>
+            <h2 className="text-[#12F7D6] text-5xl">
+              {currentYear - startYear}
+            </h2>
             <p className="text-white grid text-xs">
               <span>Years of</span>
               <span>Experience</span>
