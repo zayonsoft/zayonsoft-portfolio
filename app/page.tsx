@@ -8,10 +8,15 @@ import Nav from "@/components/landing/Nav";
 import ScrollController from "@/components/landing/ScrollController";
 import Skills from "@/components/landing/Skills";
 
+import { Suspense } from "react";
+
 export default function Home() {
   return (
     <section>
-      <ScrollController />
+      <Suspense fallback={null}>
+        <ScrollController />
+      </Suspense>
+
       <FixedBar />
       <div className="relative z-[100000]">
         <Nav />
