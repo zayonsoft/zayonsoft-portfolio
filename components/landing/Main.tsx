@@ -34,7 +34,7 @@ export default function Main() {
           <div className="grid rounded-full p-[5px] profile-pic max-w-[290px] justify-self-end max-[701px]:justify-self-center">
             <div className="relative z-10">
               <Image
-                className="w-auto min-w-20 h-[90vh] rounded-full select-none object-center max-[701px]:min-w-auto"
+                className="w-auto min-w-20 h-[90vh] rounded-full select-none object-center max-[701px]:min-w-auto max-[701px]:h-auto"
                 src={"/zayonsoft_pic.png"}
                 height={1500}
                 width={1000}
