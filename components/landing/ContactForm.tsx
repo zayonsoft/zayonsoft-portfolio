@@ -208,7 +208,7 @@ export default function ContactForm({}) {
         <button
           className={`custom-transition flex items-center font-normal m-auto rounded-full text-[#292F36] ${
             loading
-              ? "bg-gray-300"
+              ? "bg-gray-300 cursor-not-allowed"
               : "bg-[#12F7D6] hover:bg-[#98FAEC] cursor-pointer"
           } py-2.5 px-6 text-lg gap-2 ${ubuntu.className}`}
         >
