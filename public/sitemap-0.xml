@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://zayonsoft.vercel.app</loc><lastmod>2025-11-22T05:37:22.627Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://zayonsoft.vercel.app</loc><lastmod>2025-11-22T06:36:45.122Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://zayonsoft.vercel.app/projects/b5f1247c-1148-42f2-855d-34e74e1e08ba</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://zayonsoft.vercel.app/projects/a261ab97-628d-4b42-850a-9ae7466e9565</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://zayonsoft.vercel.app/projects/5b3c570d-c46d-4f14-9bf5-fda9c7f3db89</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://zayonsoft.vercel.app/projects/46ed8ca2-11e0-4593-9fbb-70c0efd4562c</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://zayonsoft.vercel.app/projects/00d1c48c-b772-4e3d-bf2e-9d8f5bd40708</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://zayonsoft.vercel.app/projects/6ae37ba8-1443-4a46-84a3-aea2954b436d</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://zayonsoft.vercel.app/projects/1308a364-7c86-4b8f-a9c5-f30fef284726</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>
