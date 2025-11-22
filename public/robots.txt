@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://zayonsoft.vercel.app
+
+# Sitemaps
+Sitemap: https://zayonsoft.vercel.app/sitemap.xml
