@@ -38,7 +38,7 @@ export default function Flow({ index, array, step, flowData }: FlowProps) {
             className="w-[1px]"
             height={100}
             width={100}
-            alt=""
+            alt="Joining Line"
             draggable={false}
           />
         </div>
