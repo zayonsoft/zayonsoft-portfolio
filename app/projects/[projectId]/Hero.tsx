@@ -22,7 +22,7 @@ export default function Hero({
       <div
         className={`${ibmPlexMono.className} flex justify-between items-center max-[701px]:grid max-[701px]:justify-stretch max-[701px]:gap-1`}
       >
-        <p className="text-white text-2xl font-semibold">{name}</p>
+        <h1 className="text-white text-2xl font-semibold">{name}</h1>
         <p
           className={`flex justify-self-end text-sm items-center gap-2 text-[#12F7D6] font-medium`}
         >

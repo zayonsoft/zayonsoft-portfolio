@@ -22,11 +22,11 @@ export default function AboutSection() {
         <section className="grid grid-cols-2 gap-5 pt-30 items-center max-[701px]:grid-cols-1 max-[701px]:pt-0">
           <div className="grid gap-12">
             <section className="p-1 bg-[#12F7D6] w-fit rounded-full max-[701px]:m-auto">
-              <h1
+              <h2
                 className={`${ubuntu.className} capitalize w-fit bg-[#292F36] text-3xl font-light px-10 py-6 rounded-full text-white max-[701px]:text-xl max-[701px]:py-4`}
               >
                 About me
-              </h1>
+              </h2>
             </section>
 
             <div

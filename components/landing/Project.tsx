@@ -49,9 +49,9 @@ export default function Project({
                 <span className="bg-[#12F7D6] h-1 w-1 rounded-full block"></span>
                 <span className="">{year}</span>
               </p>
-              <h1 className={`text-3xl text-white tracking-wider font-medium`}>
+              <h2 className={`text-3xl text-white tracking-wider font-medium`}>
                 {name}
-              </h1>
+              </h2>
             </div>
             {/* Desktop View Title ends */}
             <div className="relative project-text rounded-xl">
@@ -95,9 +95,9 @@ export default function Project({
               <span className="bg-[#12F7D6] h-1 w-1 rounded-full block"></span>
               <span className="">{year}</span>
             </p>
-            <h1 className={`text-3xl text-white tracking-wider font-medium`}>
+            <h2 className={`text-3xl text-white tracking-wider font-medium`}>
               {name}
-            </h1>
+            </h2>
           </div>
           <div className="relative">
             {/* The glow at the back of the image */}

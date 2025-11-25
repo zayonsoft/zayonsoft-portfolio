@@ -12,11 +12,11 @@ export default function ChallengesSolution({ challenges_solutions }: CSProps) {
   return (
     <section className="grid py-15 gap-10  px-20 max-[901px]:px-10 max-[701px]:px-5">
       <div className="grid gap-3.5 justify-items-center w-fit justify-self-center">
-        <h1
+        <h2
           className={`text-[#12F7D6] capitalize text-3xl ${ubuntu.className}`}
         >
           Challenges and Solutions
-        </h1>
+        </h2>
         <div className="w-full">
           <FancyUnderline />
         </div>

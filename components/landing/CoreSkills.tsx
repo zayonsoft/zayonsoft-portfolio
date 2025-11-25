@@ -19,9 +19,9 @@ export default function CoreSkills() {
     <div className="grid gap-5">
       <section className="grid gap-10">
         <div className="relative grid gap-2 justify-items-center w-fit justify-self-center">
-          <h1 className={`text-[#12F7D6] text-3xl ${ubuntu.className}`}>
+          <h2 className={`text-[#12F7D6] text-3xl ${ubuntu.className}`}>
             Core Skills
-          </h1>
+          </h2>
           <div className="w-full">
             <FancyUnderline />
           </div>

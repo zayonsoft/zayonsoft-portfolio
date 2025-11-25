@@ -51,12 +51,12 @@ export default async function Projects() {
     }
   } catch {
     return (
-      <h1 className="grid gap-1 justify-items-center py-20 text-[#12F7D6] text-xl max-[701px]:text-lg">
+      <h2 className="grid gap-1 justify-items-center py-20 text-[#12F7D6] text-xl max-[701px]:text-lg">
         <span className="text-2xl">
           <BsEmojiFrown />
         </span>
         <span>Couldn&apos;t Load Projects!</span>
-      </h1>
+      </h2>
     );
   }
 }

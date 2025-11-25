@@ -19,9 +19,9 @@ export default function Contact() {
             alt="Design Icon"
           ></Image>
           <div className="grid gap-2 justify-items-center w-fit justify-self-center">
-            <h1 className={`text-[#12F7D6] text-3xl ${ubuntu.className}`}>
+            <h2 className={`text-[#12F7D6] text-3xl ${ubuntu.className}`}>
               Contact
-            </h1>
+            </h2>
             <div className="w-full">
               <FancyUnderline />
             </div>

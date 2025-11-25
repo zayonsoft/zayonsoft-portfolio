@@ -29,6 +29,9 @@ export default function Main() {
       id="home"
       className="pt-27 pb-10 px-20 grid gap-16 max-[901px]:px-10 max-[701px]:px-5"
     >
+      <h1 className="hidden" style={{ display: "none" }}>
+        TONY-AKINLOSOTU FAVOUR ADENIRAN'S WEBSITE - ZAYONSOFT
+      </h1>
       <div className="grid gap-1 grid-cols-[0.65fr_1fr] max-[780px]:grid-cols-[0.7fr_1fr] max-[701px]:grid-cols-1 max-[701px]:gap-8">
         <div className="pr-10 max-[840px]:pr-0">
           <div className="grid rounded-full p-[5px] profile-pic max-w-[290px] justify-self-end max-[701px]:justify-self-center">
@@ -45,7 +48,7 @@ export default function Main() {
                 {/* Picture Texts goes below */}
                 <div className="grid gap-5 justify-self-center">
                   <div className={`${ubuntu.className} grid gap-1.5`}>
-                    <h1 className={`text-white text-4xl`}>Favour</h1>
+                    <p className={`text-white text-4xl`}>Favour</p>
                     <p className="text-white text-sm">Full-stack developer</p>
                   </div>
                   {/* Details Under name and role below */}
@@ -115,18 +118,18 @@ export default function Main() {
                 {"<h1>"}
               </p>
               <div className={`grid gap-3 pl-4  text-4xl ${ubuntu}`}>
-                <h1>Hey</h1>
-                <h1>
+                <p>Hey</p>
+                <p>
                   I&apos;m <span className="text-[#12F7D6]">Favour</span>,
-                </h1>
-                <h1>
+                </p>
+                <p>
                   <span>Full-stack developer </span>
                   <span
                     className={`${ibmPlexMono.className} text-xs text-[#98FAEC]`}
                   >
                     {"</h1>"}
                   </span>
-                </h1>
+                </p>
               </div>
             </div>
             <div className={`grid gap-2`}>
