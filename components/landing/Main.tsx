@@ -30,7 +30,7 @@ export default function Main() {
       className="pt-27 pb-10 px-20 grid gap-16 max-[901px]:px-10 max-[701px]:px-5"
     >
       <h1 className="hidden" style={{ display: "none" }}>
-        TONY-AKINLOSOTU FAVOUR ADENIRAN'S WEBSITE - ZAYONSOFT
+        TONY-AKINLOSOTU FAVOUR ADENIRAN &apos;S WEBSITE - ZAYONSOFT
       </h1>
       <div className="grid gap-1 grid-cols-[0.65fr_1fr] max-[780px]:grid-cols-[0.7fr_1fr] max-[701px]:grid-cols-1 max-[701px]:gap-8">
         <div className="pr-10 max-[840px]:pr-0">
