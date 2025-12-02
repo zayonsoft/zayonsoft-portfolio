@@ -176,7 +176,7 @@ export default function Main() {
             <h2 className="text-[#12F7D6] text-5xl">{numberOfLanguages}</h2>
             <p className="text-white grid text-xs">
               <span>Programing</span>
-              <span>Language</span>
+              <span>Languages</span>
             </p>
           </div>
 

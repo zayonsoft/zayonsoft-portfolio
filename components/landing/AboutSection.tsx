@@ -37,8 +37,8 @@ export default function AboutSection() {
               </p>
               <p className="text-[#12F7D6]">Hello!</p>
               <p>
-                My name is <b>Favour</b> and I specialize in web developement
-                that utilizes <span className="text-[#12F7D6]">HTML</span>,
+                I am <b>Favour</b> and I specialize in web developement that
+                utilizes <span className="text-[#12F7D6]">HTML</span>,
                 <span className="text-[#12F7D6]"> CSS</span>,
                 <span className="text-[#12F7D6]"> JS</span>, and
                 <span className="text-[#12F7D6]"> REACT</span> etc. I am an

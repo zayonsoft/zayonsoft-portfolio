@@ -272,7 +272,7 @@
     "hero_images": ["/smart_agro/hero1.png", "/smart_agro/hero2.png"],
     "year": "2024",
     "type": "Undergraduate Thesis",
-    "overview": "A highly interactive and responsive website that contains embedded with a chatbot that allows users to ask about their poultry related issues and gives them apt responses in real-time.",
+    "overview": "A highly interactive and responsive website embedded with a chatbot that allows users to ask about their poultry related issues and gives them apt responses in real-time.",
     "problem": "The need to provide poultry farmers or other related individuals with real-time responses and a reliable standby solution to problems or diseases involving poultry.",
     "project_images": [
       ["/smart_agro/project00.png", "/smart_agro/project01.png"],
