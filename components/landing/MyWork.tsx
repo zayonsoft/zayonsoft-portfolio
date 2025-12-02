@@ -31,7 +31,7 @@ export default function MyWork() {
             <p
               className={` text-white ${ibmPlexMono.className} tracking-wider text-center text-sm m-auto`}
             >
-              I had the pleasure of working on these awesome projects
+              I have had the pleasure of working on these awesome projects
             </p>
           </div>
         </section>
