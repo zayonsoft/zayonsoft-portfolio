@@ -8,10 +8,10 @@ import FancyUnderline from "../general/FancyUnderline";
 export default function CoreSkills() {
   const skillList = [
     { name: "Coding", percentage: "90%" },
-    { name: "Problem solving", percentage: "90%" },
+    { name: "Problem solving", percentage: "87%" },
     { name: "Critical thinking", percentage: "90%" },
     { name: "Research", percentage: "85%" },
-    { name: "Innovation", percentage: "90%" },
+    { name: "Innovation", percentage: "88%" },
     { name: "Presentation", percentage: "85%" },
   ];
   const [skills] = useState(skillList);
