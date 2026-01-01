@@ -2,6 +2,7 @@ import Link from "next/link";
 import { BsTwitterX, BsGithub } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa6";
 import { ubuntu } from "./Main";
+import DevDateRange from "./DevDateRange";
 
 const socialLinkUrls = {
   github: process.env.NEXT_PUBLIC_GITHUB_URL || "",
@@ -10,14 +11,6 @@ const socialLinkUrls = {
 };
 
 const designerLink = process.env.NEXT_PUBLIC_DESIGNER_LINK || "";
-let yearDeveloped = process.env.NEXT_PUBLIC_YEAR_DEVELOPED || 2025;
-const currentYear = new Date().getFullYear();
-
-yearDeveloped = Number(yearDeveloped) ? Number(yearDeveloped) : 2025;
-const footerDate =
-  currentYear == yearDeveloped
-    ? `${2025}`
-    : `${yearDeveloped} - ${currentYear}`;
 
 export default function Footer() {
   return (
@@ -26,7 +19,7 @@ export default function Footer() {
     >
       <div className="max-[701px]:order-2">
         <p className="text-white">
-          &copy; {footerDate} ZayonSoft. All rights reserved.
+          &copy; {<DevDateRange />} ZayonSoft. All rights reserved.
         </p>
       </div>
       <div className="flex gap-5 items-center max-[701px]:order-1">

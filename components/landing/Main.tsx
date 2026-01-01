@@ -5,6 +5,8 @@ import { BiLink } from "react-icons/bi";
 import { CgBriefcase, CgMail } from "react-icons/cg";
 import { SlLocationPin } from "react-icons/sl";
 import ResumeDownloadButton from "./ResumeDownloadButton";
+import CurrentYear from "./CurrentYear";
+import YearsOfExperience from "./YearsOfExperience";
 
 export const ibmPlexMono = IBM_Plex_Mono({
   weight: ["100", "200", "300", "400", "500", "600", "700"],
@@ -21,17 +23,22 @@ export default function Main() {
   const numberOfLanguages =
     Number(process.env.NEXT_PUBLIC_NO_OF_LANGUAGES) || 0;
   const numberOfDevTools = Number(process.env.NEXT_PUBLIC_NO_OF_DEV_TOOLS) || 0;
-  const startYear =
-    Number(process.env.NEXT_PUBLIC_START_YEAR) || new Date().getFullYear();
-  const currentYear = new Date().getFullYear();
+  const startYear = Number(process.env.NEXT_PUBLIC_START_YEAR) || CurrentYear();
   return (
     <section
       id="home"
       className="pt-27 pb-10 px-20 grid gap-16 max-[901px]:px-10 max-[701px]:px-5"
     >
-      <h1 className="hidden" style={{ display: "none" }}>
-        TONY-AKINLOSOTU FAVOUR ADENIRAN &apos;S WEBSITE - ZAYONSOFT
-      </h1>
+      <div className="hidden" style={{ display: "none" }}>
+        <h1>TONY-AKINLOSOTU FAVOUR ADENIRAN &apos;S WEBSITE - ZAYONSOFT</h1>
+        <h1>
+          TONY-AKINLOSOTU FAVOUR ADENIRAN is professionally known as ZayonSoft
+        </h1>
+        <h1>
+          TONY-AKINLOSOTU FAVOUR ADENIRAN (Zayonsoft) excels both as a backend
+          developer and as a frontend developer
+        </h1>
+      </div>
       <div className="grid gap-1 grid-cols-[0.65fr_1fr] max-[780px]:grid-cols-[0.7fr_1fr] max-[701px]:grid-cols-1 max-[701px]:gap-8">
         <div className="pr-10 max-[840px]:pr-0">
           <div className="grid rounded-full p-[5px] profile-pic max-w-[290px] justify-self-end max-[701px]:justify-self-center">
@@ -188,9 +195,7 @@ export default function Main() {
             </p>
           </div>
           <div className="flex items-center gap-2">
-            <h2 className="text-[#12F7D6] text-5xl">
-              {currentYear - startYear}
-            </h2>
+            <h2 className="text-[#12F7D6] text-5xl">{<YearsOfExperience />}</h2>
             <p className="text-white grid text-xs">
               <span>Years of</span>
               <span>Experience</span>
